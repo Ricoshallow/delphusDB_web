@@ -18329,3 +18329,26 @@
 2021-07-27 09:14:13.971315 <INFO> :chunkNode clean closed transactions successfully.
 2021-07-27 09:14:38.283659 <ERROR> :Received FD_CLOSE
 2021-07-27 09:14:38.283659 <INFO> :Close a connection with index=2. Number of remaining connections: 1
+2021-07-27 09:15:13.560444 <INFO> :IoTransactionMgmt::collectGarbage execute successfully.
+2021-07-27 09:15:13.560444 <INFO> :chunkNode clean closed transactions successfully.
+2021-07-27 09:16:07.122391 <INFO> :chunksCollectGarbage successfully.
+2021-07-27 09:16:14.206706 <INFO> :IoTransactionMgmt::collectGarbage execute successfully.
+2021-07-27 09:16:14.206706 <INFO> :chunkNode clean closed transactions successfully.
+2021-07-27 09:17:13.804747 <INFO> :IoTransactionMgmt::collectGarbage execute successfully.
+2021-07-27 09:17:13.804747 <INFO> :chunkNode clean closed transactions successfully.
+2021-07-27 09:18:14.473137 <INFO> :IoTransactionMgmt::collectGarbage execute successfully.
+2021-07-27 09:18:14.473137 <INFO> :chunkNode clean closed transactions successfully.
+2021-07-27 09:19:14.098595 <INFO> :IoTransactionMgmt::collectGarbage execute successfully.
+2021-07-27 09:19:14.098595 <INFO> :chunkNode clean closed transactions successfully.
+2021-07-27 09:20:03.906007 <INFO> :Clear expired session 169625159
+2021-07-27 09:20:13.720156 <INFO> :IoTransactionMgmt::collectGarbage execute successfully.
+2021-07-27 09:20:13.720156 <INFO> :chunkNode clean closed transactions successfully.
+2021-07-27 09:21:07.282273 <INFO> :chunksCollectGarbage successfully.
+2021-07-27 09:21:14.341131 <INFO> :IoTransactionMgmt::collectGarbage execute successfully.
+2021-07-27 09:21:14.341131 <INFO> :chunkNode clean closed transactions successfully.
+2021-07-27 09:22:14.016102 <INFO> :IoTransactionMgmt::collectGarbage execute successfully.
+2021-07-27 09:22:14.016102 <INFO> :chunkNode clean closed transactions successfully.
+2021-07-27 09:23:13.644089 <INFO> :IoTransactionMgmt::collectGarbage execute successfully.
+2021-07-27 09:23:13.644089 <INFO> :chunkNode clean closed transactions successfully.
+2021-07-27 09:24:14.307769 <INFO> :IoTransactionMgmt::collectGarbage execute successfully.
+2021-07-27 09:24:14.307769 <INFO> :chunkNode clean closed transactions successfully.
