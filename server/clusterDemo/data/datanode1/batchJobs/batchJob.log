@@ -1,0 +1,62 @@
+Node	UserId	JobId	Desc	Priority	Parallelism	ReceivedTime	StartTime	EndTime	ErrorMsg
+datanode1	guest	collectMemoryStat	collectMemoryStat	0	1	2021.07.12T14:44:27.210			
+datanode1	guest	collectMemoryStat	collectMemoryStat	0	1	2021.07.12T14:44:27.210	2021.07.12T14:44:27.211		
+datanode1	guest	collectMemoryStat	collectMemoryStat	0	1	2021.07.12T14:44:27.210	2021.07.12T14:44:27.211	2021.07.12T14:51:31.933	collectMemoryStat: saveText(mem_info, "/hdd/hdd9/hzzhao/test_result_mem.csv") => Cannot open file [/hdd/hdd9/hzzhao/test_result_mem.csv]. 系统找不到指定的路径。
+
+datanode1	guest	collectMemoryStat20210712	collectMemoryStat	0	1	2021.07.12T15:07:27.792			
+datanode1	guest	collectMemoryStat20210712	collectMemoryStat	0	1	2021.07.12T15:07:27.792	2021.07.12T15:07:27.792		
+datanode1	guest	collectMemoryStat202107120000	collectMemoryStat	0	1	2021.07.12T15:11:43.150			
+datanode1	guest	collectMemoryStat202107120000	collectMemoryStat	0	1	2021.07.12T15:11:43.150	2021.07.12T15:11:43.150		
+datanode1	guest	collectMemoryStat202107120000	collectMemoryStat	0	1	2021.07.12T15:11:43.150	2021.07.12T15:11:43.150	2021.07.12T15:18:47.775	collectMemoryStat: saveText(mem_info, "/hdd/hdd9/hzzhao/test_result_mem.csv") => Cannot open file [/hdd/hdd9/hzzhao/test_result_mem.csv]. 系统找不到指定的路径。
+
+datanode1	guest	collectMemoryStat202107120001	collectMemoryStat	0	1	2021.07.12T16:11:10.721			
+datanode1	guest	collectMemoryStat202107120001	collectMemoryStat	0	1	2021.07.12T16:11:10.721	2021.07.12T16:11:10.721		
+datanode1	guest	collectMemoryStat202107120001	collectMemoryStat	0	1	2021.07.12T16:11:10.721	2021.07.12T16:11:10.721	2021.07.12T16:18:15.059	collectMemoryStat: saveText(mem_info, "/hdd/hdd9/hzzhao/test_result_mem.csv") => Cannot open file [/hdd/hdd9/hzzhao/test_result_mem.csv]. 系统找不到指定的路径。
+
+datanode1	admin	mysleep	m1	4	2	2021.07.13T12:08:49.948			
+datanode1	admin	mysleep	m1	4	2	2021.07.13T12:08:49.948	2021.07.13T12:08:49.950		
+datanode1	admin	mysleep	m1	4	2	2021.07.13T12:08:49.948	2021.07.13T12:08:49.950	2021.07.13T12:09:08.134	job1: sleep(1000) => The task was cancelled.
+datanode1	admin	mysleep20210713	m1	4	2	2021.07.13T12:09:25.861			
+datanode1	admin	mysleep20210713	m1	4	2	2021.07.13T12:09:25.861	2021.07.13T12:09:25.862		
+datanode1	admin	mysleep20210713	m1	4	2	2021.07.13T12:09:25.861	2021.07.13T12:09:25.862	2021.07.13T12:11:06.850	
+datanode1	admin	mysleep202107130000	m1	4	2	2021.07.13T13:06:54.634			
+datanode1	admin	mysleep202107130000	m1	4	2	2021.07.13T13:06:54.634	2021.07.13T13:06:54.635		
+datanode1	admin	mysleep202107130000	m1	4	2	2021.07.13T13:06:54.634	2021.07.13T13:06:54.635	2021.07.13T13:08:19.606	job1: sleep(1000) => The task was cancelled.
+datanode1	admin	mysleep202107130001	m1	4	2	2021.07.13T13:14:41.657			
+datanode1	admin	mysleep202107130001	m1	4	2	2021.07.13T13:14:41.657	2021.07.13T13:14:41.658		
+datanode1	admin	mysleep202107130001	m1	4	2	2021.07.13T13:14:41.657	2021.07.13T13:14:41.658	2021.07.13T13:15:07.957	job1: sleep(1000) => The task was cancelled.
+datanode1	admin	mysleep202107130002	m1	4	2	2021.07.13T13:51:37.603			
+datanode1	admin	mysleep202107130002	m1	4	2	2021.07.13T13:51:37.603	2021.07.13T13:51:37.605		
+datanode1	admin	mysleep202107130002	m1	4	2	2021.07.13T13:51:37.603	2021.07.13T13:51:37.605	2021.07.13T13:51:43.672	job1: sleep(1000) => The task was cancelled.
+datanode1	admin	mysleep202107130003	m1	4	2	2021.07.13T13:52:46.265			
+datanode1	admin	mysleep202107130003	m1	4	2	2021.07.13T13:52:46.265	2021.07.13T13:52:46.266		
+datanode1	admin	mysleep202107130003	m1	4	2	2021.07.13T13:52:46.265	2021.07.13T13:52:46.266	2021.07.13T13:52:54.341	job1: sleep(1000) => The task was cancelled.
+datanode1	admin	mysleep202107130004	m1	4	2	2021.07.13T13:54:11.810			
+datanode1	admin	mysleep202107130004	m1	4	2	2021.07.13T13:54:11.810	2021.07.13T13:54:11.811		
+datanode1	admin	mysleep202107130004	m1	4	2	2021.07.13T13:54:11.810	2021.07.13T13:54:11.811	2021.07.13T13:54:20.898	job1: sleep(1000) => The task was cancelled.
+datanode1	admin	mysleep202107130005	m1	4	2	2021.07.13T13:58:56.818			
+datanode1	admin	mysleep202107130005	m1	4	2	2021.07.13T13:58:56.818	2021.07.13T13:58:56.819		
+datanode1	admin	mysleep202107130005	m1	4	2	2021.07.13T13:58:56.818	2021.07.13T13:58:56.819	2021.07.13T13:59:05.899	job1: sleep(1000) => The task was cancelled.
+datanode1	admin	mysleep202107130006	m1	4	2	2021.07.13T14:03:02.554			
+datanode1	admin	mysleep202107130006	m1	4	2	2021.07.13T14:03:02.554	2021.07.13T14:03:02.556		
+datanode1	admin	mysleep202107130006	m1	4	2	2021.07.13T14:03:02.554	2021.07.13T14:03:02.556	2021.07.13T14:03:09.614	job1: sleep(1000) => The task was cancelled.
+datanode1	admin	mysleep202107130007	m1	4	2	2021.07.13T14:11:11.226			
+datanode1	admin	mysleep202107130007	m1	4	2	2021.07.13T14:11:11.226	2021.07.13T14:11:11.227		
+datanode1	admin	mysleep202107130007	m1	4	2	2021.07.13T14:11:11.226	2021.07.13T14:11:11.227	2021.07.13T14:11:17.287	job1: sleep(1000) => The task was cancelled.
+datanode1	admin	mysleep202107130008	m1	4	2	2021.07.13T14:52:46.993			
+datanode1	admin	mysleep202107130008	m1	4	2	2021.07.13T14:52:46.993	2021.07.13T14:52:46.994		
+datanode1	admin	mysleep202107130008	m1	4	2	2021.07.13T14:52:46.993	2021.07.13T14:52:46.994	2021.07.13T14:53:05.225	job1: sleep(1000) => The task was cancelled.
+datanode1	guest	collectMemoryStat20210719	collectMemoryStat	0	1	2021.07.19T17:57:41.656			
+datanode1	guest	collectMemoryStat20210719	collectMemoryStat	0	1	2021.07.19T17:57:41.656	2021.07.19T17:57:41.656		
+datanode1	guest	collectMemoryStat20210719	collectMemoryStat	0	1	2021.07.19T17:57:41.656	2021.07.19T17:57:41.656	2021.07.19T18:04:46.074	collectMemoryStat: saveText(mem_info, "/hdd/hdd9/hzzhao/test_result_mem.csv") => Cannot open file [/hdd/hdd9/hzzhao/test_result_mem.csv]. 系统找不到指定的路径。
+
+datanode1	guest	collectMemoryStat20210720	collectMemoryStat	0	1	2021.07.20T17:15:23.018			
+datanode1	guest	collectMemoryStat20210720	collectMemoryStat	0	1	2021.07.20T17:15:23.018	2021.07.20T17:15:23.018		
+datanode1	guest	collectMemoryStat20210720	collectMemoryStat	0	1	2021.07.20T17:15:23.018	2021.07.20T17:15:23.018	2021.07.20T17:22:27.777	collectMemoryStat: saveText(mem_info, "/hdd/hdd9/hzzhao/test_result_mem.csv") => Cannot open file [/hdd/hdd9/hzzhao/test_result_mem.csv]. 系统找不到指定的路径。
+
+datanode1	admin	testJob000	getMaxTemperature1	8	64	2021.07.27T00:00:10.869			
+datanode1	admin	testJob000	getMaxTemperature1	8	64	2021.07.27T00:00:10.869	2021.07.27T00:00:10.891		
+datanode1	admin	testJob	getMaxTemperature2	8	64	2021.07.27T00:00:10.894			
+datanode1	admin	testJob000	getMaxTemperature1	8	64	2021.07.27T00:00:10.869	2021.07.27T00:00:10.891	2021.07.27T00:00:10.896	getMaxTemperature1: maxTemp = exec max(temperature) as max_temperature from loadTable("dfs://dolphindb", "sensor") where ID == deviceID,ts between ::datetime(today() - 1) : (::datetime(today()) - 1) => RemoteRun[controller1] getFileBlocksMeta on path '/dolphindb/domain' failed, reason: path does not exist
+datanode1	admin	testJob	getMaxTemperature2	8	64	2021.07.27T00:00:10.894	2021.07.27T00:00:10.896		
+datanode1	admin	testJob	getMaxTemperature2	8	64	2021.07.27T00:00:10.894	2021.07.27T00:00:10.896	2021.07.27T00:00:10.897	getMaxTemperature2: maxTemp = exec max(temperature) as max_temperature from loadTable("dfs://dolphindb", "sensor") where ID == deviceID,ts between ::datetime(today() - 1) : (::datetime(today()) - 1) => RemoteRun[controller1] getFileBlocksMeta on path '/dolphindb/domain' failed, reason: path does not exist

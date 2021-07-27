@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>DolphinDB Memory Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DolphinDB Node Management">
+    <meta name="author" content="DolphinDB">
+    <link rel="stylesheet" href="third-party/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="third-party/bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="third-party/bootstrap/css/docs.css">
+    <link rel="stylesheet" href="css/custom-theme/jquery-ui.css">
+    <link rel="stylesheet" href="third-party/bootstrap/js/google-code-prettify/prettify.css">
+    <link rel="shortcut icon" href="third-party/bootstrap/ico/logo.png">
+    <link href="third-party/jstree/themes/default/style.css" rel="stylesheet" />
+    <link href="third-party/jsgrid/jsgrid.css" rel="stylesheet" />
+    <link href="third-party/jsgrid/jsgrid-theme.css" rel="stylesheet" />
+    <link href="third-party/codemirror/lib/codemirror.css" rel="stylesheet">
+    <link href="third-party/codemirror/addon/hint/show-hint.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <script type="text/javascript" src="third-party/codemirror/lib/codemirror.js"></script>
+    <script type="text/javascript" src="third-party/codemirror/mode/dolphindb/dolphindb.js"></script>
+    
+</head>
+
+<style>
+    .iconfont{-webkit-text-stroke-width: 0.2px;}
+</style>
+
+<body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true" style="padding-top: 0;">
+
+    <!-- pubTables management -->
+    <div class="container-fluid" id="layout" style="width:99vw;padding:10px;padding-left:20px">
+        <div class="row">
+            <div class="panel-body">
+                <div class="btn-toolbar" role="toolbar">
+                    <div id="nodes">
+
+                    </div>
+                    <div class="input-group" style="margin-top: 20px; width: 30%;">
+                        <input type="text" id="searchbox" class="form-control" >
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+            <!-- table displaying pubTables usage-->
+            <div class="panel-body" id="dataTable">
+                <!-- <div id="title"></div>
+                <div class="table-div" id="pubTablesTable"> 
+
+                </div>  -->
+            </div>
+        </div>
+    </div>
+
+    <script src="third-party/bootstrap/js/vendor/jquery-3.5.1.min.js" type="text/javascript"></script>
+    <script src="third-party/bootstrap/js/vendor/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+    <script src="third-party/bootstrap/js/vendor/bootstrap.js" type="text/javascript"></script>
+    <script src="third-party/bootstrap/js/vendor/jquery.cookie.js" type="text/javascript"></script>
+    <script src="third-party/bootstrap/js/vendor/jquery-ui.js" type="text/javascript"></script>
+    <script src="third-party/jstree/jstree.js" type="text/javascript"></script>
+    <script src="third-party/jsgrid/jsgrid.js" type="text/javascript"></script>
+    <script src="js/datagrid.js" type="text/javascript"></script>
+    <script src="js/executecode.js" type="text/javascript"></script>
+    <script src="js/CallWebApi.js" type="text/javascript"></script>
+    <script src="js/dialog.js" type="text/javascript"></script>
+    <script src="js/utils.js" type="text/javascript"></script>
+    <script src="js/dfsExplorer.js" type="text/javascript"></script>
+    <script src="js/dolphinApi.js" type="text/javascript"></script>
+    <script src="js/pubTables.js" type="text/javascript"></script>
+</body>
+
+</html>

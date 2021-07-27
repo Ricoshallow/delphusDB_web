@@ -1,0 +1,23 @@
+Node	UserId	JobId	Desc	Priority	Parallelism	ReceivedTime	StartTime	EndTime	ErrorMsg
+controller1	guest	collectMemoryStat	collectMemoryStat	0	1	2021.07.12T15:11:20.997			
+controller1	guest	collectMemoryStat	collectMemoryStat	0	1	2021.07.12T15:11:20.997	2021.07.12T15:11:20.998		
+controller1	guest	collectMemoryStat	collectMemoryStat	0	1	2021.07.12T15:11:20.997	2021.07.12T15:11:20.998	2021.07.12T15:18:25.617	collectMemoryStat: saveText(mem_info, "/hdd/hdd9/hzzhao/test_result_mem.csv") => Cannot open file [/hdd/hdd9/hzzhao/test_result_mem.csv]. 系统找不到指定的路径。
+
+controller1	admin	mysleep	m1	4	2	2021.07.13T15:42:16.157			
+controller1	admin	mysleep	m1	4	2	2021.07.13T15:42:16.157	2021.07.13T15:42:16.158		
+controller1	admin	mysleep	m1	4	2	2021.07.13T15:42:16.157	2021.07.13T15:42:16.158	2021.07.13T15:43:40.085	job1: sleep(1000) => The task was cancelled.
+controller1	admin	mysleep20210713	m1	4	2	2021.07.13T15:45:54.091			
+controller1	admin	mysleep20210713	m1	4	2	2021.07.13T15:45:54.091	2021.07.13T15:45:54.092		
+controller1	admin	mysleep20210713	m1	4	2	2021.07.13T15:45:54.091	2021.07.13T15:45:54.092	2021.07.13T15:47:35.196	
+controller1	guest	collectMemoryStat20210719	collectMemoryStat	0	1	2021.07.19T09:15:00.837			
+controller1	guest	collectMemoryStat20210719	collectMemoryStat	0	1	2021.07.19T09:15:00.837	2021.07.19T09:15:00.837		
+controller1	guest	collectMemoryStat20210719	collectMemoryStat	0	1	2021.07.19T09:15:00.837	2021.07.19T09:15:00.837	2021.07.19T09:22:05.411	collectMemoryStat: saveText(mem_info, "/hdd/hdd9/hzzhao/test_result_mem.csv") => Cannot open file [/hdd/hdd9/hzzhao/test_result_mem.csv]. 系统找不到指定的路径。
+
+controller1	guest	collectMemoryStat202107190000	collectMemoryStat	0	1	2021.07.19T17:53:19.667			
+controller1	guest	collectMemoryStat202107190000	collectMemoryStat	0	1	2021.07.19T17:53:19.667	2021.07.19T17:53:19.668		
+controller1	guest	collectMemoryStat202107190001	collectMemoryStat	0	1	2021.07.19T17:53:59.690			
+controller1	guest	collectMemoryStat202107190001	collectMemoryStat	0	1	2021.07.19T17:53:59.690	2021.07.19T17:53:59.690		
+controller1	guest	collectMemoryStat202107190000	collectMemoryStat	0	1	2021.07.19T17:53:19.667	2021.07.19T17:53:19.668	2021.07.19T18:00:24.364	collectMemoryStat: saveText(mem_info, "/hdd/hdd9/hzzhao/test_result_mem.csv") => Cannot open file [/hdd/hdd9/hzzhao/test_result_mem.csv]. 系统找不到指定的路径。
+
+controller1	guest	collectMemoryStat202107190001	collectMemoryStat	0	1	2021.07.19T17:53:59.690	2021.07.19T17:53:59.690	2021.07.19T18:01:04.497	collectMemoryStat: saveText(mem_info, "/hdd/hdd9/hzzhao/test_result_mem.csv") => Cannot open file [/hdd/hdd9/hzzhao/test_result_mem.csv]. 系统找不到指定的路径。
+

@@ -1,0 +1,15 @@
+body, th, td, button, input, select, textarea {
+    font-family: "Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,"WenQuanYi Micro Hei",Verdana,sans-serif,"\5B8B\4F53";
+    }
+
+.jsgrid-cell { white-space: normal !important; height:auto; } /**jsgrid表格内容自动换行 */
+
+#title, #title1, #title2 {
+    margin-bottom: 20px;
+}
+#title p {
+    text-align: center; font-weight: bold; font-size: 16px;
+}
+dialog {
+    border: solid 2px black !important;
+}

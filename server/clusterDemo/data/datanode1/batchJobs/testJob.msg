@@ -1,0 +1,2 @@
+2021-07-27 00:00:10.896530 Start the job [testJob]: getMaxTemperature2
+2021-07-27 00:00:10.897491 getMaxTemperature2: maxTemp = exec max(temperature) as max_temperature from loadTable("dfs://dolphindb", "sensor") where ID == deviceID,ts between ::datetime(today() - 1) : (::datetime(today()) - 1) => RemoteRun[controller1] getFileBlocksMeta on path '/dolphindb/domain' failed, reason: path does not exist

@@ -1,0 +1,1135 @@
+2021-07-06 11:03:01.403748 <INFO> :localExecutors = 1
+2021-07-06 11:03:01.403748 <INFO> :maxMemSize = 1
+2021-07-06 11:03:01.403748 <INFO> :localSite = 127.0.0.1:22212:agent1
+2021-07-06 11:03:01.403748 <INFO> :mode = agent
+2021-07-06 11:03:01.403748 <INFO> :config = config/agent.cfg
+2021-07-06 11:03:01.403748 <INFO> :home = data
+2021-07-06 11:03:01.403748 <INFO> :controllerSite = 127.0.0.1:22210:controller1
+2021-07-06 11:03:01.403748 <INFO> :logFile = log/agent.log
+2021-07-06 11:03:01.403748 <INFO> :script = dolphindb.dos
+2021-07-06 11:03:01.404745 <INFO> :starting dolphindb sever...
+2021-07-06 11:03:01.404745 <INFO> :cpu affinity [0,1]
+2021-07-06 11:03:01.409732 <INFO> :BlockIOManager Workers=1 OneWorkerPerVolume=1
+2021-07-06 11:03:01.425085 <INFO> :Executing the system script:  C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server/dolphindb.dos
+2021-07-06 11:03:01.427953 <INFO> :Create new server key and certificate.
+2021-07-06 11:03:02.272998 <INFO> :alias = agent1
+2021-07-06 11:03:02.272998 <INFO> :host = 127.0.0.1
+2021-07-06 11:03:02.272998 <INFO> :port = 22212
+2021-07-06 11:03:02.272998 <INFO> :mode = agent
+2021-07-06 11:03:02.272998 <INFO> :coreNum = 16
+2021-07-06 11:03:02.272998 <INFO> :maxNodeNum(license) = 3
+2021-07-06 11:03:02.272998 <INFO> :maxMemSize(GB) = 1
+2021-07-06 11:03:02.272998 <INFO> :workerNum = 16
+2021-07-06 11:03:02.272998 <INFO> :localExecutors = 1
+2021-07-06 11:03:02.272998 <INFO> :remoteExecutors = 0
+2021-07-06 11:03:02.272998 <INFO> :maxConnections(inward) = 32
+2021-07-06 11:03:02.272998 <INFO> :maxConnections(outward) = 0
+2021-07-06 11:03:02.272998 <INFO> :maxConnectionPerSite(outward) = 18
+2021-07-06 11:03:02.272998 <INFO> :maxMsgNumPerBlock =1024
+2021-07-06 11:03:02.272998 <INFO> :maxPubConnections = 0
+2021-07-06 11:03:02.272998 <INFO> :maxSubConnections = 64
+2021-07-06 11:03:02.272998 <INFO> :subPort = 0
+2021-07-06 11:03:02.272998 <INFO> :subExecutors = 1
+2021-07-06 11:03:02.272998 <INFO> :subExecutorPooling = 0
+2021-07-06 11:03:02.274002 <INFO> :Job schedule initialized successfully.
+2021-07-06 11:03:02.275988 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-06 11:03:02.275988 <INFO> :New connection from ip = 127.0.0.1 port = 52672
+2021-07-06 11:03:02.276986 <ERROR> :Received FD_CLOSE
+2021-07-06 11:03:02.276986 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-06 11:03:46.140988 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-06 11:03:46.140988 <INFO> :New connection from ip = 127.0.0.1 port = 58776
+2021-07-06 11:03:46.141982 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -newValuePartitionPolicy add -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -dfsReplicationFactor 2 -workerNum 4 -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 -lanCluster 1 -enableHTTPS 0 -dataSync 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-06 11:03:46.303396 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -newValuePartitionPolicy add -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -dfsReplicationFactor 2 -workerNum 4 -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 -lanCluster 1 -enableHTTPS 0 -dataSync 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-06 11:03:46.303396 <ERROR> :Received FD_CLOSE
+2021-07-06 11:03:46.303396 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-06 11:07:22.253398 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-06 11:07:22.253398 <INFO> :New connection from ip = 127.0.0.1 port = 59199
+2021-07-06 11:07:22.254395 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 2 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-06 11:07:22.272345 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 2 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-06 11:07:22.272345 <ERROR> :Received FD_CLOSE
+2021-07-06 11:07:22.272345 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-06 11:10:52.438226 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-06 11:10:52.439225 <INFO> :New connection from ip = 127.0.0.1 port = 51058
+2021-07-06 11:18:02.287528 <INFO> :Clear expired http(json) console with index = 0
+2021-07-06 11:18:02.287528 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-06 11:23:02.339263 <INFO> :Clear expired session 884862900
+2021-07-06 11:29:00.207435 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-06 11:29:00.207435 <INFO> :New connection from ip = 127.0.0.1 port = 57246
+2021-07-06 11:34:02.517131 <INFO> :Clear expired http(json) console with index = 0
+2021-07-06 11:34:02.517131 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-06 11:39:02.569068 <INFO> :Clear expired session 911644588
+2021-07-06 14:20:00.946611 <INFO> :Received exit event.
+2021-07-06 14:20:00.946611 <INFO> :Worker Thread 6 terminated peacefully.
+2021-07-06 14:20:00.946611 <INFO> :Worker Thread 10 terminated peacefully.
+2021-07-06 14:20:00.946611 <INFO> :The local executor thread 0 terminated peacefully.
+2021-07-06 14:20:00.946611 <INFO> :Worker Thread 9 terminated peacefully.
+2021-07-06 14:20:00.946611 <INFO> :Worker Thread 8 terminated peacefully.
+2021-07-06 14:20:00.946611 <INFO> :Worker Thread 7 terminated peacefully.
+2021-07-06 14:20:00.946611 <INFO> :Worker Thread 0 terminated peacefully.
+2021-07-06 14:20:00.946611 <INFO> :Worker Thread 1 terminated peacefully.
+2021-07-06 14:20:00.946611 <INFO> :Worker Thread 14 terminated peacefully.
+2021-07-06 14:20:00.946611 <INFO> :Worker Thread 15 terminated peacefully.
+2021-07-06 14:20:00.946611 <INFO> :Worker Thread 12 terminated peacefully.
+2021-07-06 14:20:00.946611 <INFO> :Worker Thread 13 terminated peacefully.
+2021-07-06 14:20:00.946611 <INFO> :Worker Thread 4 terminated peacefully.
+2021-07-06 14:20:00.946611 <INFO> :Worker Thread 11 terminated peacefully.
+2021-07-06 14:20:00.946611 <INFO> :Worker Thread 5 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 3 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 2 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 14 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 13 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 12 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 11 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 9 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 10 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 7 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 8 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 5 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 6 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 3 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 4 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 1 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 2 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 0 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 16 terminated peacefully.
+2021-07-06 14:20:00.947611 <INFO> :Worker Thread 15 terminated peacefully.
+2021-07-06 14:20:00.969887 <INFO> :The inbound socket thread terminated peacefully.
+2021-07-06 14:20:00.969887 <ERROR> :The socket server ended.
+2021-07-06 14:20:01.153483 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 6
+2021-07-06 14:20:01.307347 <INFO> :HeatBeatSender terminated peacefully.
+2021-07-06 14:20:01.368793 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 5
+2021-07-06 14:20:01.445597 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-06 14:20:01.445597 <INFO> :DynamicWorkerManager Thread  terminated peacefully.
+2021-07-06 14:20:01.461281 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-06 14:20:01.583736 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 2
+2021-07-06 14:20:01.660451 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-06 14:20:01.798402 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-06 14:20:01.999057 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-06 14:20:02.212111 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-06 14:20:02.426608 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-06 14:20:02.627621 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-06 14:20:02.842935 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-06 14:20:03.055287 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-06 14:20:03.062272 <INFO> :MainServer shutdown.
+
+2021-07-06 14:24:54.010440 <INFO> :localExecutors = 1
+2021-07-06 14:24:54.010440 <INFO> :maxMemSize = 1
+2021-07-06 14:24:54.010440 <INFO> :localSite = 127.0.0.1:22212:agent1
+2021-07-06 14:24:54.010440 <INFO> :mode = agent
+2021-07-06 14:24:54.010440 <INFO> :config = config/agent.cfg
+2021-07-06 14:24:54.010440 <INFO> :home = data
+2021-07-06 14:24:54.010440 <INFO> :controllerSite = 127.0.0.1:22210:controller1
+2021-07-06 14:24:54.010440 <INFO> :logFile = log/agent.log
+2021-07-06 14:24:54.010440 <INFO> :script = dolphindb.dos
+2021-07-06 14:24:54.011437 <INFO> :starting dolphindb sever...
+2021-07-06 14:24:54.011437 <INFO> :cpu affinity [0,1]
+2021-07-06 14:24:54.016422 <INFO> :BlockIOManager Workers=1 OneWorkerPerVolume=1
+2021-07-06 14:24:54.023404 <INFO> :Executing the system script:  C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server/dolphindb.dos
+2021-07-06 14:24:54.755705 <INFO> :alias = agent1
+2021-07-06 14:24:54.755705 <INFO> :host = 127.0.0.1
+2021-07-06 14:24:54.755705 <INFO> :port = 22212
+2021-07-06 14:24:54.755705 <INFO> :mode = agent
+2021-07-06 14:24:54.755705 <INFO> :coreNum = 16
+2021-07-06 14:24:54.755705 <INFO> :maxNodeNum(license) = 3
+2021-07-06 14:24:54.755705 <INFO> :maxMemSize(GB) = 1
+2021-07-06 14:24:54.755705 <INFO> :workerNum = 16
+2021-07-06 14:24:54.755705 <INFO> :localExecutors = 1
+2021-07-06 14:24:54.755705 <INFO> :remoteExecutors = 0
+2021-07-06 14:24:54.755705 <INFO> :maxConnections(inward) = 32
+2021-07-06 14:24:54.755705 <INFO> :maxConnections(outward) = 0
+2021-07-06 14:24:54.755705 <INFO> :maxConnectionPerSite(outward) = 18
+2021-07-06 14:24:54.755705 <INFO> :maxMsgNumPerBlock =1024
+2021-07-06 14:24:54.755705 <INFO> :maxPubConnections = 0
+2021-07-06 14:24:54.755705 <INFO> :maxSubConnections = 64
+2021-07-06 14:24:54.755705 <INFO> :subPort = 0
+2021-07-06 14:24:54.755705 <INFO> :subExecutors = 1
+2021-07-06 14:24:54.755705 <INFO> :subExecutorPooling = 0
+2021-07-06 14:24:54.757706 <INFO> :Job schedule initialized successfully.
+2021-07-06 14:24:58.789862 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-06 14:24:58.790858 <INFO> :New connection from ip = 127.0.0.1 port = 55490
+2021-07-06 14:24:58.792860 <ERROR> :Received FD_CLOSE
+2021-07-06 14:24:58.793848 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-07 09:11:56.351739 <INFO> :localExecutors = 1
+2021-07-07 09:11:56.351739 <INFO> :maxMemSize = 1
+2021-07-07 09:11:56.351739 <INFO> :localSite = 127.0.0.1:22212:agent1
+2021-07-07 09:11:56.351739 <INFO> :mode = agent
+2021-07-07 09:11:56.351739 <INFO> :config = config/agent.cfg
+2021-07-07 09:11:56.351739 <INFO> :home = data
+2021-07-07 09:11:56.351739 <INFO> :controllerSite = 127.0.0.1:22210:controller1
+2021-07-07 09:11:56.351739 <INFO> :logFile = log/agent.log
+2021-07-07 09:11:56.351739 <INFO> :script = dolphindb.dos
+2021-07-07 09:11:56.352736 <INFO> :starting dolphindb sever...
+2021-07-07 09:11:56.352736 <INFO> :cpu affinity [0,1]
+2021-07-07 09:11:56.357720 <INFO> :BlockIOManager Workers=1 OneWorkerPerVolume=1
+2021-07-07 09:11:56.372482 <INFO> :Executing the system script:  C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server/dolphindb.dos
+2021-07-07 09:11:57.101170 <INFO> :alias = agent1
+2021-07-07 09:11:57.101170 <INFO> :host = 127.0.0.1
+2021-07-07 09:11:57.101170 <INFO> :port = 22212
+2021-07-07 09:11:57.101170 <INFO> :mode = agent
+2021-07-07 09:11:57.101170 <INFO> :coreNum = 16
+2021-07-07 09:11:57.101170 <INFO> :maxNodeNum(license) = 3
+2021-07-07 09:11:57.101170 <INFO> :maxMemSize(GB) = 1
+2021-07-07 09:11:57.101170 <INFO> :workerNum = 16
+2021-07-07 09:11:57.101170 <INFO> :localExecutors = 1
+2021-07-07 09:11:57.101170 <INFO> :remoteExecutors = 0
+2021-07-07 09:11:57.101170 <INFO> :maxConnections(inward) = 32
+2021-07-07 09:11:57.101170 <INFO> :maxConnections(outward) = 0
+2021-07-07 09:11:57.101170 <INFO> :maxConnectionPerSite(outward) = 18
+2021-07-07 09:11:57.101170 <INFO> :maxMsgNumPerBlock =1024
+2021-07-07 09:11:57.101170 <INFO> :maxPubConnections = 0
+2021-07-07 09:11:57.101170 <INFO> :maxSubConnections = 64
+2021-07-07 09:11:57.101170 <INFO> :subPort = 0
+2021-07-07 09:11:57.101170 <INFO> :subExecutors = 1
+2021-07-07 09:11:57.101170 <INFO> :subExecutorPooling = 0
+2021-07-07 09:11:57.103168 <INFO> :Job schedule initialized successfully.
+2021-07-07 09:12:00.666994 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-07 09:12:00.666994 <INFO> :New connection from ip = 127.0.0.1 port = 50596
+2021-07-07 09:12:00.668089 <ERROR> :Received FD_CLOSE
+2021-07-07 09:12:00.668089 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-07 11:14:03.581202 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-07 11:14:03.581202 <INFO> :New connection from ip = 127.0.0.1 port = 50725
+2021-07-07 11:14:03.581202 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 2 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-07 11:14:03.741054 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 2 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-07 11:14:03.741054 <ERROR> :Received FD_CLOSE
+2021-07-07 11:14:03.741054 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-07 11:16:07.329441 <INFO> :Received exit event.
+2021-07-07 11:16:07.329441 <INFO> :The local executor thread 0 terminated peacefully.
+2021-07-07 11:16:07.329441 <INFO> :Worker Thread 3 terminated peacefully.
+2021-07-07 11:16:07.329441 <INFO> :Worker Thread 2 terminated peacefully.
+2021-07-07 11:16:07.330439 <INFO> :Worker Thread 1 terminated peacefully.
+2021-07-07 11:16:07.330439 <INFO> :Worker Thread 0 terminated peacefully.
+2021-07-07 11:16:07.330439 <INFO> :Worker Thread 15 terminated peacefully.
+2021-07-07 11:16:07.330439 <INFO> :Worker Thread 14 terminated peacefully.
+2021-07-07 11:16:07.330439 <INFO> :Worker Thread 13 terminated peacefully.
+2021-07-07 11:16:07.330439 <INFO> :Worker Thread 12 terminated peacefully.
+2021-07-07 11:16:07.330439 <INFO> :Worker Thread 11 terminated peacefully.
+2021-07-07 11:16:07.330439 <INFO> :Worker Thread 10 terminated peacefully.
+2021-07-07 11:16:07.330439 <INFO> :Worker Thread 9 terminated peacefully.
+2021-07-07 11:16:07.330439 <INFO> :Worker Thread 8 terminated peacefully.
+2021-07-07 11:16:07.330439 <INFO> :Worker Thread 7 terminated peacefully.
+2021-07-07 11:16:07.330439 <INFO> :Worker Thread 6 terminated peacefully.
+2021-07-07 11:16:07.330439 <INFO> :Worker Thread 5 terminated peacefully.
+2021-07-07 11:16:07.330439 <INFO> :Worker Thread 4 terminated peacefully.
+2021-07-07 11:16:07.330439 <INFO> :Worker Thread 14 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 15 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 12 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 13 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 10 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 8 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 6 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 4 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 11 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 2 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 9 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 0 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 7 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 5 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 3 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 1 terminated peacefully.
+2021-07-07 11:16:07.331436 <INFO> :Worker Thread 16 terminated peacefully.
+2021-07-07 11:16:07.360396 <INFO> :The inbound socket thread terminated peacefully.
+2021-07-07 11:16:07.360396 <ERROR> :The socket server ended.
+2021-07-07 11:16:07.533133 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 6
+2021-07-07 11:16:07.735954 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 6
+2021-07-07 11:16:07.735954 <INFO> :HeatBeatSender terminated peacefully.
+2021-07-07 11:16:07.751461 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-07 11:16:07.751461 <INFO> :DynamicWorkerManager Thread  terminated peacefully.
+2021-07-07 11:16:07.783703 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-07 11:16:07.940087 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 2
+2021-07-07 11:16:08.143106 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 2
+2021-07-07 11:16:08.266400 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-07 11:16:08.345506 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-07 11:16:08.546848 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-07 11:16:08.748964 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-07 11:16:08.952583 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-07 11:16:09.155851 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-07 11:16:09.358050 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-07 11:16:09.364071 <INFO> :MainServer shutdown.
+
+2021-07-07 11:16:30.046173 <INFO> :localExecutors = 1
+2021-07-07 11:16:30.046173 <INFO> :maxMemSize = 1
+2021-07-07 11:16:30.046173 <INFO> :localSite = 127.0.0.1:22212:agent1
+2021-07-07 11:16:30.046173 <INFO> :mode = agent
+2021-07-07 11:16:30.046173 <INFO> :config = config/agent.cfg
+2021-07-07 11:16:30.046173 <INFO> :home = data
+2021-07-07 11:16:30.046173 <INFO> :controllerSite = 127.0.0.1:22210:controller1
+2021-07-07 11:16:30.046173 <INFO> :logFile = log/agent.log
+2021-07-07 11:16:30.046173 <INFO> :script = dolphindb.dos
+2021-07-07 11:16:30.046173 <INFO> :starting dolphindb sever...
+2021-07-07 11:16:30.046173 <INFO> :cpu affinity [0,1]
+2021-07-07 11:16:30.051159 <INFO> :BlockIOManager Workers=1 OneWorkerPerVolume=1
+2021-07-07 11:16:30.060166 <INFO> :Executing the system script:  C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server/dolphindb.dos
+2021-07-07 11:16:30.793655 <INFO> :alias = agent1
+2021-07-07 11:16:30.793655 <INFO> :host = 127.0.0.1
+2021-07-07 11:16:30.793655 <INFO> :port = 22212
+2021-07-07 11:16:30.793655 <INFO> :mode = agent
+2021-07-07 11:16:30.793655 <INFO> :coreNum = 16
+2021-07-07 11:16:30.793655 <INFO> :maxNodeNum(license) = 3
+2021-07-07 11:16:30.793655 <INFO> :maxMemSize(GB) = 1
+2021-07-07 11:16:30.793655 <INFO> :workerNum = 16
+2021-07-07 11:16:30.793655 <INFO> :localExecutors = 1
+2021-07-07 11:16:30.793655 <INFO> :remoteExecutors = 0
+2021-07-07 11:16:30.793655 <INFO> :maxConnections(inward) = 32
+2021-07-07 11:16:30.793655 <INFO> :maxConnections(outward) = 0
+2021-07-07 11:16:30.793655 <INFO> :maxConnectionPerSite(outward) = 18
+2021-07-07 11:16:30.793655 <INFO> :maxMsgNumPerBlock =1024
+2021-07-07 11:16:30.793655 <INFO> :maxPubConnections = 0
+2021-07-07 11:16:30.793655 <INFO> :maxSubConnections = 64
+2021-07-07 11:16:30.793655 <INFO> :subPort = 0
+2021-07-07 11:16:30.793655 <INFO> :subExecutors = 1
+2021-07-07 11:16:30.793655 <INFO> :subExecutorPooling = 0
+2021-07-07 11:16:30.796652 <INFO> :Job schedule initialized successfully.
+2021-07-07 11:16:32.842501 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-07 11:16:32.843498 <INFO> :New connection from ip = 127.0.0.1 port = 57356
+2021-07-07 11:16:32.844492 <ERROR> :Received FD_CLOSE
+2021-07-07 11:16:32.844492 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-07 11:17:01.172797 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-07 11:17:01.172797 <INFO> :New connection from ip = 127.0.0.1 port = 60513
+2021-07-07 11:17:01.172797 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-07 11:17:01.330419 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-07 11:17:01.330419 <ERROR> :Received FD_CLOSE
+2021-07-07 11:17:01.330419 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-09 09:01:54.018631 <INFO> :localExecutors = 1
+2021-07-09 09:01:54.018631 <INFO> :maxMemSize = 1
+2021-07-09 09:01:54.018631 <INFO> :localSite = 127.0.0.1:22212:agent1
+2021-07-09 09:01:54.018631 <INFO> :mode = agent
+2021-07-09 09:01:54.018631 <INFO> :config = config/agent.cfg
+2021-07-09 09:01:54.018631 <INFO> :home = data
+2021-07-09 09:01:54.018631 <INFO> :controllerSite = 127.0.0.1:22210:controller1
+2021-07-09 09:01:54.018631 <INFO> :logFile = log/agent.log
+2021-07-09 09:01:54.018631 <INFO> :script = dolphindb.dos
+2021-07-09 09:01:54.018631 <INFO> :starting dolphindb sever...
+2021-07-09 09:01:54.018631 <INFO> :cpu affinity [0,1]
+2021-07-09 09:01:54.034254 <INFO> :BlockIOManager Workers=1 OneWorkerPerVolume=1
+2021-07-09 09:01:54.050045 <INFO> :Executing the system script:  C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server/dolphindb.dos
+2021-07-09 09:01:54.784216 <INFO> :alias = agent1
+2021-07-09 09:01:54.784216 <INFO> :host = 127.0.0.1
+2021-07-09 09:01:54.784216 <INFO> :port = 22212
+2021-07-09 09:01:54.784216 <INFO> :mode = agent
+2021-07-09 09:01:54.784216 <INFO> :coreNum = 16
+2021-07-09 09:01:54.784216 <INFO> :maxNodeNum(license) = 3
+2021-07-09 09:01:54.784216 <INFO> :maxMemSize(GB) = 1
+2021-07-09 09:01:54.784216 <INFO> :workerNum = 16
+2021-07-09 09:01:54.784216 <INFO> :localExecutors = 1
+2021-07-09 09:01:54.784216 <INFO> :remoteExecutors = 0
+2021-07-09 09:01:54.784216 <INFO> :maxConnections(inward) = 32
+2021-07-09 09:01:54.784216 <INFO> :maxConnections(outward) = 0
+2021-07-09 09:01:54.784216 <INFO> :maxConnectionPerSite(outward) = 18
+2021-07-09 09:01:54.784216 <INFO> :maxMsgNumPerBlock =1024
+2021-07-09 09:01:54.784216 <INFO> :maxPubConnections = 0
+2021-07-09 09:01:54.784216 <INFO> :maxSubConnections = 64
+2021-07-09 09:01:54.784216 <INFO> :subPort = 0
+2021-07-09 09:01:54.784216 <INFO> :subExecutors = 1
+2021-07-09 09:01:54.784216 <INFO> :subExecutorPooling = 0
+2021-07-09 09:01:54.784216 <INFO> :Job schedule initialized successfully.
+2021-07-09 09:01:57.849550 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-09 09:01:57.849550 <INFO> :New connection from ip = 127.0.0.1 port = 64346
+2021-07-09 09:01:57.849550 <ERROR> :Received FD_CLOSE
+2021-07-09 09:01:57.849550 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-09 09:07:27.447321 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-09 09:07:27.447321 <INFO> :New connection from ip = 127.0.0.1 port = 57018
+2021-07-09 09:07:27.448319 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-09 09:07:27.594219 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-09 09:07:27.594219 <ERROR> :Received FD_CLOSE
+2021-07-09 09:07:27.594219 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-09 09:07:38.079615 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-09 09:07:38.079615 <INFO> :New connection from ip = 127.0.0.1 port = 57025
+2021-07-09 09:07:38.079615 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-09 09:07:38.095603 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-09 09:07:38.095603 <ERROR> :Received FD_CLOSE
+2021-07-09 09:07:38.095603 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-12 08:56:40.019209 <ERROR> :UdpSocket::send error code 10065
+2021-07-12 08:56:40.521571 <ERROR> :UdpSocket::send error code 10065
+2021-07-12 08:56:41.025668 <ERROR> :UdpSocket::send error code 10065
+2021-07-12 08:56:41.527884 <ERROR> :UdpSocket::send error code 10065
+2021-07-12 15:05:33.128351 <INFO> :Received exit event.
+2021-07-12 15:05:33.128351 <INFO> :Worker Thread 4 terminated peacefully.
+2021-07-12 15:05:33.128351 <INFO> :Worker Thread 5 terminated peacefully.
+2021-07-12 15:05:33.128351 <INFO> :Worker Thread 2 terminated peacefully.
+2021-07-12 15:05:33.128351 <INFO> :Worker Thread 0 terminated peacefully.
+2021-07-12 15:05:33.128351 <INFO> :Worker Thread 3 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 14 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 1 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 12 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 15 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 10 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 13 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 11 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 8 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 9 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 6 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 7 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 15 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :The local executor thread 0 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 14 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 13 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 12 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 11 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 10 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 9 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 8 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 6 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 4 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 7 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 5 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 2 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 3 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 1 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 0 terminated peacefully.
+2021-07-12 15:05:33.129337 <INFO> :Worker Thread 16 terminated peacefully.
+2021-07-12 15:05:33.131313 <INFO> :The inbound socket thread terminated peacefully.
+2021-07-12 15:05:33.131313 <ERROR> :The socket server ended.
+2021-07-12 15:05:33.332452 <INFO> :HeatBeatSender terminated peacefully.
+2021-07-12 15:05:33.332452 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 6
+2021-07-12 15:05:33.487776 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-12 15:05:33.535474 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 4
+2021-07-12 15:05:33.597953 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-12 15:05:33.739587 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 3
+2021-07-12 15:05:33.941388 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 3
+2021-07-12 15:05:33.989065 <INFO> :DynamicWorkerManager Thread  terminated peacefully.
+2021-07-12 15:05:33.989065 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-12 15:05:34.144917 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-12 15:05:34.347068 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-12 15:05:34.552196 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-12 15:05:34.754013 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-12 15:05:34.957202 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-12 15:05:35.158780 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-12 15:05:35.162775 <INFO> :MainServer shutdown.
+
+2021-07-12 15:06:04.527740 <INFO> :localExecutors = 1
+2021-07-12 15:06:04.527740 <INFO> :maxMemSize = 1
+2021-07-12 15:06:04.527740 <INFO> :localSite = 127.0.0.1:22212:agent1
+2021-07-12 15:06:04.527740 <INFO> :mode = agent
+2021-07-12 15:06:04.527740 <INFO> :config = config/agent.cfg
+2021-07-12 15:06:04.527740 <INFO> :home = data
+2021-07-12 15:06:04.527740 <INFO> :controllerSite = 127.0.0.1:22210:controller1
+2021-07-12 15:06:04.527740 <INFO> :logFile = log/agent.log
+2021-07-12 15:06:04.527740 <INFO> :script = dolphindb.dos
+2021-07-12 15:06:04.528737 <INFO> :starting dolphindb sever...
+2021-07-12 15:06:04.528737 <INFO> :cpu affinity [0,1]
+2021-07-12 15:06:04.533758 <INFO> :BlockIOManager Workers=1 OneWorkerPerVolume=1
+2021-07-12 15:06:04.549352 <INFO> :Executing the system script:  C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server/dolphindb.dos
+2021-07-12 15:06:05.281536 <INFO> :alias = agent1
+2021-07-12 15:06:05.281536 <INFO> :host = 127.0.0.1
+2021-07-12 15:06:05.281536 <INFO> :port = 22212
+2021-07-12 15:06:05.281536 <INFO> :mode = agent
+2021-07-12 15:06:05.281536 <INFO> :coreNum = 16
+2021-07-12 15:06:05.281536 <INFO> :maxNodeNum(license) = 3
+2021-07-12 15:06:05.281536 <INFO> :maxMemSize(GB) = 1
+2021-07-12 15:06:05.281536 <INFO> :workerNum = 16
+2021-07-12 15:06:05.281536 <INFO> :localExecutors = 1
+2021-07-12 15:06:05.281536 <INFO> :remoteExecutors = 0
+2021-07-12 15:06:05.281536 <INFO> :maxConnections(inward) = 32
+2021-07-12 15:06:05.281536 <INFO> :maxConnections(outward) = 0
+2021-07-12 15:06:05.281536 <INFO> :maxConnectionPerSite(outward) = 18
+2021-07-12 15:06:05.281536 <INFO> :maxMsgNumPerBlock =1024
+2021-07-12 15:06:05.281536 <INFO> :maxPubConnections = 0
+2021-07-12 15:06:05.281536 <INFO> :maxSubConnections = 64
+2021-07-12 15:06:05.281536 <INFO> :subPort = 0
+2021-07-12 15:06:05.281536 <INFO> :subExecutors = 1
+2021-07-12 15:06:05.281536 <INFO> :subExecutorPooling = 0
+2021-07-12 15:06:05.286522 <INFO> :Job schedule initialized successfully.
+2021-07-12 15:06:07.851225 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-12 15:06:07.852095 <INFO> :New connection from ip = 127.0.0.1 port = 59220
+2021-07-12 15:06:07.853095 <ERROR> :Received FD_CLOSE
+2021-07-12 15:06:07.853095 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-12 15:07:04.410029 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-12 15:07:04.410029 <INFO> :New connection from ip = 127.0.0.1 port = 57817
+2021-07-12 15:07:04.411023 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-12 15:07:04.568442 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-12 15:07:04.568442 <ERROR> :Received FD_CLOSE
+2021-07-12 15:07:04.568442 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-12 15:09:55.464356 <INFO> :Received exit event.
+2021-07-12 15:09:55.465341 <INFO> :The local executor thread 0 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 4 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 5 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 7 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 6 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 9 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 8 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 11 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 10 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 13 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 15 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 12 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 1 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 3 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 14 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 0 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 0 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 2 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 2 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 4 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 6 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 16 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 8 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 1 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 10 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 3 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 12 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 5 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 14 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 7 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 9 terminated peacefully.
+2021-07-12 15:09:55.465341 <INFO> :Worker Thread 11 terminated peacefully.
+2021-07-12 15:09:55.466343 <INFO> :Worker Thread 13 terminated peacefully.
+2021-07-12 15:09:55.466343 <INFO> :Worker Thread 15 terminated peacefully.
+2021-07-12 15:09:55.489625 <INFO> :The inbound socket thread terminated peacefully.
+2021-07-12 15:09:55.489625 <ERROR> :The socket server ended.
+2021-07-12 15:09:55.568576 <INFO> :HeatBeatSender terminated peacefully.
+2021-07-12 15:09:55.678743 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 5
+2021-07-12 15:09:55.881375 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 5
+2021-07-12 15:09:56.021080 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-12 15:09:56.021080 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-12 15:09:56.084824 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 3
+2021-07-12 15:09:56.210267 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-12 15:09:56.210267 <INFO> :DynamicWorkerManager Thread  terminated peacefully.
+2021-07-12 15:09:56.286947 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-12 15:09:56.490160 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-12 15:09:56.692254 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-12 15:09:56.894149 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-12 15:09:57.097485 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-12 15:09:57.299497 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-12 15:09:57.501448 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-12 15:09:57.522389 <INFO> :MainServer shutdown.
+
+2021-07-12 15:10:01.201576 <INFO> :localExecutors = 1
+2021-07-12 15:10:01.201576 <INFO> :maxMemSize = 1
+2021-07-12 15:10:01.201576 <INFO> :localSite = 127.0.0.1:22212:agent1
+2021-07-12 15:10:01.201576 <INFO> :mode = agent
+2021-07-12 15:10:01.201576 <INFO> :config = config/agent.cfg
+2021-07-12 15:10:01.201576 <INFO> :home = data
+2021-07-12 15:10:01.201576 <INFO> :controllerSite = 127.0.0.1:22210:controller1
+2021-07-12 15:10:01.201576 <INFO> :logFile = log/agent.log
+2021-07-12 15:10:01.201576 <INFO> :script = dolphindb.dos
+2021-07-12 15:10:01.201576 <INFO> :starting dolphindb sever...
+2021-07-12 15:10:01.201576 <INFO> :cpu affinity [0,1]
+2021-07-12 15:10:01.206563 <INFO> :BlockIOManager Workers=1 OneWorkerPerVolume=1
+2021-07-12 15:10:01.226340 <INFO> :Executing the system script:  C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server/dolphindb.dos
+2021-07-12 15:10:01.972231 <INFO> :alias = agent1
+2021-07-12 15:10:01.972231 <INFO> :host = 127.0.0.1
+2021-07-12 15:10:01.972231 <INFO> :port = 22212
+2021-07-12 15:10:01.972231 <INFO> :mode = agent
+2021-07-12 15:10:01.972231 <INFO> :coreNum = 16
+2021-07-12 15:10:01.972231 <INFO> :maxNodeNum(license) = 3
+2021-07-12 15:10:01.972231 <INFO> :maxMemSize(GB) = 1
+2021-07-12 15:10:01.972231 <INFO> :workerNum = 16
+2021-07-12 15:10:01.972231 <INFO> :localExecutors = 1
+2021-07-12 15:10:01.972231 <INFO> :remoteExecutors = 0
+2021-07-12 15:10:01.972231 <INFO> :maxConnections(inward) = 32
+2021-07-12 15:10:01.972231 <INFO> :maxConnections(outward) = 0
+2021-07-12 15:10:01.972231 <INFO> :maxConnectionPerSite(outward) = 18
+2021-07-12 15:10:01.972231 <INFO> :maxMsgNumPerBlock =1024
+2021-07-12 15:10:01.972231 <INFO> :maxPubConnections = 0
+2021-07-12 15:10:01.972231 <INFO> :maxSubConnections = 64
+2021-07-12 15:10:01.972231 <INFO> :subPort = 0
+2021-07-12 15:10:01.972231 <INFO> :subExecutors = 1
+2021-07-12 15:10:01.972231 <INFO> :subExecutorPooling = 0
+2021-07-12 15:10:01.974225 <INFO> :Job schedule initialized successfully.
+2021-07-12 15:10:01.981671 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-12 15:10:01.982662 <INFO> :New connection from ip = 127.0.0.1 port = 63932
+2021-07-12 15:10:01.983657 <ERROR> :Received FD_CLOSE
+2021-07-12 15:10:01.983657 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-12 15:10:22.458302 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-12 15:10:22.458302 <INFO> :New connection from ip = 127.0.0.1 port = 63936
+2021-07-12 15:10:22.459296 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-12 15:10:22.617859 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-12 15:10:22.618856 <ERROR> :Received FD_CLOSE
+2021-07-12 15:10:22.618856 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-13 08:52:28.090167 <ERROR> :UdpSocket::send error code 10065
+2021-07-13 08:52:28.595900 <ERROR> :UdpSocket::send error code 10065
+2021-07-13 08:52:29.106091 <ERROR> :UdpSocket::send error code 10065
+2021-07-13 08:52:29.610770 <ERROR> :UdpSocket::send error code 10065
+2021-07-14 08:52:25.735637 <ERROR> :UdpSocket::send error code 10065
+2021-07-14 08:52:26.251472 <ERROR> :UdpSocket::send error code 10065
+2021-07-14 08:52:26.757533 <ERROR> :UdpSocket::send error code 10065
+2021-07-14 08:52:27.275108 <ERROR> :UdpSocket::send error code 10065
+2021-07-16 09:01:59.058127 <ERROR> :UdpSocket::send error code 10065
+2021-07-16 09:01:59.562430 <ERROR> :UdpSocket::send error code 10065
+2021-07-16 09:02:00.072584 <ERROR> :UdpSocket::send error code 10065
+2021-07-16 09:02:00.574257 <ERROR> :UdpSocket::send error code 10065
+2021-07-16 20:31:30.632472 <INFO> :Received exit event.
+2021-07-16 20:31:30.632472 <INFO> :The local executor thread 0 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 5 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 7 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 9 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 11 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 15 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 1 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 3 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 2 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 0 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 0 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 2 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 14 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 4 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 12 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 10 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 6 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 8 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 6 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 8 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 4 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 10 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 12 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 16 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 1 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 14 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 3 terminated peacefully.
+2021-07-16 20:31:30.633469 <INFO> :Worker Thread 13 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 5 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 7 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 9 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 11 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 13 terminated peacefully.
+2021-07-16 20:31:30.634466 <INFO> :Worker Thread 15 terminated peacefully.
+2021-07-16 20:31:30.641729 <INFO> :The inbound socket thread terminated peacefully.
+2021-07-16 20:31:30.641729 <ERROR> :The socket server ended.
+2021-07-16 20:31:30.812889 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-16 20:31:30.812889 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-16 20:31:30.843950 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 4
+2021-07-16 20:31:31.045603 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 4
+2021-07-16 20:31:31.139506 <INFO> :HeatBeatSender terminated peacefully.
+2021-07-16 20:31:31.247416 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 3
+2021-07-16 20:31:31.262949 <INFO> :DynamicWorkerManager Thread  terminated peacefully.
+2021-07-16 20:31:31.451208 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 2
+2021-07-16 20:31:31.466603 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-16 20:31:31.654151 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-16 20:31:31.856698 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-16 20:31:32.060061 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-16 20:31:32.264168 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-16 20:31:32.466312 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-16 20:31:32.669782 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-16 20:31:32.674769 <INFO> :MainServer shutdown.
+
+2021-07-19 09:10:16.284087 <INFO> :localExecutors = 1
+2021-07-19 09:10:16.284087 <INFO> :maxMemSize = 1
+2021-07-19 09:10:16.284087 <INFO> :localSite = 127.0.0.1:22212:agent1
+2021-07-19 09:10:16.284087 <INFO> :mode = agent
+2021-07-19 09:10:16.284087 <INFO> :config = config/agent.cfg
+2021-07-19 09:10:16.284087 <INFO> :home = data
+2021-07-19 09:10:16.284087 <INFO> :controllerSite = 127.0.0.1:22210:controller1
+2021-07-19 09:10:16.284087 <INFO> :logFile = log/agent.log
+2021-07-19 09:10:16.284087 <INFO> :script = dolphindb.dos
+2021-07-19 09:10:16.284087 <INFO> :starting dolphindb sever...
+2021-07-19 09:10:16.284087 <INFO> :cpu affinity [0,1]
+2021-07-19 09:10:16.284087 <INFO> :BlockIOManager Workers=1 OneWorkerPerVolume=1
+2021-07-19 09:10:16.299750 <INFO> :Executing the system script:  C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server/dolphindb.dos
+2021-07-19 09:10:17.034155 <INFO> :alias = agent1
+2021-07-19 09:10:17.034155 <INFO> :host = 127.0.0.1
+2021-07-19 09:10:17.034155 <INFO> :port = 22212
+2021-07-19 09:10:17.034155 <INFO> :mode = agent
+2021-07-19 09:10:17.034155 <INFO> :coreNum = 16
+2021-07-19 09:10:17.034155 <INFO> :maxNodeNum(license) = 3
+2021-07-19 09:10:17.034155 <INFO> :maxMemSize(GB) = 1
+2021-07-19 09:10:17.034155 <INFO> :workerNum = 16
+2021-07-19 09:10:17.034155 <INFO> :localExecutors = 1
+2021-07-19 09:10:17.034155 <INFO> :remoteExecutors = 0
+2021-07-19 09:10:17.034155 <INFO> :maxConnections(inward) = 32
+2021-07-19 09:10:17.034155 <INFO> :maxConnections(outward) = 0
+2021-07-19 09:10:17.034155 <INFO> :maxConnectionPerSite(outward) = 18
+2021-07-19 09:10:17.034155 <INFO> :maxMsgNumPerBlock =1024
+2021-07-19 09:10:17.034155 <INFO> :maxPubConnections = 0
+2021-07-19 09:10:17.034155 <INFO> :maxSubConnections = 64
+2021-07-19 09:10:17.034155 <INFO> :subPort = 0
+2021-07-19 09:10:17.034155 <INFO> :subExecutors = 1
+2021-07-19 09:10:17.034155 <INFO> :subExecutorPooling = 0
+2021-07-19 09:10:17.034155 <INFO> :Job schedule initialized successfully.
+2021-07-19 09:10:17.034155 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-19 09:10:17.034155 <INFO> :New connection from ip = 127.0.0.1 port = 63199
+2021-07-19 09:10:17.034155 <ERROR> :Received FD_CLOSE
+2021-07-19 09:10:17.034155 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-19 09:15:48.679647 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-19 09:15:48.679647 <INFO> :New connection from ip = 127.0.0.1 port = 54093
+2021-07-19 09:15:48.679647 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-19 09:15:48.698665 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-19 09:15:48.698665 <ERROR> :Received FD_CLOSE
+2021-07-19 09:15:48.698665 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 08:57:27.081366 <ERROR> :UdpSocket::send error code 10065
+2021-07-20 08:57:27.600327 <ERROR> :UdpSocket::send error code 10065
+2021-07-20 08:57:28.120328 <ERROR> :UdpSocket::send error code 10065
+2021-07-20 08:57:28.640435 <ERROR> :UdpSocket::send error code 10065
+2021-07-20 11:28:16.910219 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 11:28:16.910219 <INFO> :New connection from ip = 127.0.0.1 port = 61091
+2021-07-20 11:28:16.912214 <ERROR> :Received FD_CLOSE
+2021-07-20 11:28:16.912214 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 11:28:25.889253 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 11:28:25.889253 <INFO> :New connection from ip = 127.0.0.1 port = 50046
+2021-07-20 11:28:25.889253 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode2 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22213:datanode2  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.err.txt
+2021-07-20 11:28:26.835724 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode2 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22213:datanode2  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.err.txt
+2021-07-20 11:28:26.835724 <ERROR> :Received FD_CLOSE
+2021-07-20 11:28:26.835724 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 11:28:33.081323 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 11:28:33.081323 <INFO> :New connection from ip = 127.0.0.1 port = 54887
+2021-07-20 11:28:33.081323 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode2 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22213:datanode2  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.err.txt
+2021-07-20 11:28:33.233694 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode2 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22213:datanode2  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.err.txt
+2021-07-20 11:28:33.233694 <ERROR> :Received FD_CLOSE
+2021-07-20 11:28:33.233694 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 12:10:34.116691 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 12:10:34.116691 <INFO> :New connection from ip = 127.0.0.1 port = 51773
+2021-07-20 12:16:25.772003 <INFO> :Clear expired http(json) console with index = 0
+2021-07-20 12:16:25.772003 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 12:21:25.874490 <INFO> :Clear expired session 1130397736
+2021-07-20 15:04:35.049334 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 15:04:35.049334 <INFO> :New connection from ip = 127.0.0.1 port = 63079
+2021-07-20 15:09:43.617862 <INFO> :Clear expired http(json) console with index = 0
+2021-07-20 15:09:43.617862 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 15:14:43.656953 <INFO> :Clear expired session 1814142937
+2021-07-20 15:39:36.452522 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 15:39:36.452522 <INFO> :New connection from ip = 127.0.0.1 port = 52432
+2021-07-20 15:39:36.453520 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:39:36.598992 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:39:36.598992 <ERROR> :Received FD_CLOSE
+2021-07-20 15:39:36.598992 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 15:39:46.740181 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 15:39:46.740181 <INFO> :New connection from ip = 127.0.0.1 port = 55850
+2021-07-20 15:39:46.740181 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:39:46.748159 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:39:46.749157 <ERROR> :Received FD_CLOSE
+2021-07-20 15:39:46.749157 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 15:39:55.268400 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 15:39:55.268400 <INFO> :New connection from ip = 127.0.0.1 port = 61122
+2021-07-20 15:39:55.268400 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:39:55.275382 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:39:55.275382 <ERROR> :Received FD_CLOSE
+2021-07-20 15:39:55.275382 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 15:40:05.548338 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 15:40:05.548338 <INFO> :New connection from ip = 127.0.0.1 port = 51221
+2021-07-20 15:40:05.549303 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:40:05.556284 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:40:05.556284 <ERROR> :Received FD_CLOSE
+2021-07-20 15:40:05.556284 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 15:40:21.620034 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 15:40:21.620034 <INFO> :New connection from ip = 127.0.0.1 port = 61322
+2021-07-20 15:40:21.621030 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:40:21.628012 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:40:21.628012 <ERROR> :Received FD_CLOSE
+2021-07-20 15:40:21.629009 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 15:40:30.884440 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 15:40:30.884440 <INFO> :New connection from ip = 127.0.0.1 port = 49782
+2021-07-20 15:40:30.885440 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:40:30.893417 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:40:30.893417 <ERROR> :Received FD_CLOSE
+2021-07-20 15:40:30.893417 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 15:41:40.988451 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 15:41:40.988451 <INFO> :New connection from ip = 127.0.0.1 port = 61163
+2021-07-20 15:41:40.989447 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:41:40.996428 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:41:40.997426 <ERROR> :Received FD_CLOSE
+2021-07-20 15:41:40.997426 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 15:42:10.140350 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 15:42:10.140350 <INFO> :New connection from ip = 127.0.0.1 port = 65050
+2021-07-20 15:42:10.140350 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:42:10.148329 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -lanCluster 1 -perfMonitoring 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -chunkCacheEngineMemSize 2 -config /noconfig -controllerSite 127.0.0.1:22210:controller1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:42:10.148329 <ERROR> :Received FD_CLOSE
+2021-07-20 15:42:10.148329 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 15:43:51.512883 <INFO> :Received exit event.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 10 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 11 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 12 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 13 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 14 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 15 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 0 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 1 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 3 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 2 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 4 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 5 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 6 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 8 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 15 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :The local executor thread 0 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 7 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 13 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 9 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 11 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 14 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 9 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 12 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 7 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 10 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 5 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 8 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 3 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 6 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 4 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 1 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 2 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 16 terminated peacefully.
+2021-07-20 15:43:51.512883 <INFO> :Worker Thread 0 terminated peacefully.
+2021-07-20 15:43:51.528686 <INFO> :The inbound socket thread terminated peacefully.
+2021-07-20 15:43:51.528686 <ERROR> :The socket server ended.
+2021-07-20 15:43:51.653592 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-20 15:43:51.731615 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 5
+2021-07-20 15:43:51.841150 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-20 15:43:51.841150 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-20 15:43:51.856766 <INFO> :DynamicWorkerManager Thread  terminated peacefully.
+2021-07-20 15:43:51.903577 <INFO> :HeatBeatSender terminated peacefully.
+2021-07-20 15:43:51.934905 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:43:52.137715 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:43:52.340977 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:43:52.544109 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:43:52.746945 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:43:52.950260 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:43:53.153094 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:43:53.366308 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:43:53.569388 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:43:53.569388 <INFO> :MainServer shutdown.
+
+2021-07-20 15:44:14.172680 <INFO> :localExecutors = 1
+2021-07-20 15:44:14.172680 <INFO> :maxMemSize = 1
+2021-07-20 15:44:14.172680 <INFO> :localSite = 127.0.0.1:22212:agent1
+2021-07-20 15:44:14.172680 <INFO> :mode = agent
+2021-07-20 15:44:14.172680 <INFO> :config = config/agent.cfg
+2021-07-20 15:44:14.172680 <INFO> :home = data
+2021-07-20 15:44:14.172680 <INFO> :controllerSite = 127.0.0.1:22210:controller1
+2021-07-20 15:44:14.172680 <INFO> :logFile = log/agent.log
+2021-07-20 15:44:14.172680 <INFO> :script = dolphindb.dos
+2021-07-20 15:44:14.172680 <INFO> :starting dolphindb sever...
+2021-07-20 15:44:14.172680 <INFO> :cpu affinity [0,1]
+2021-07-20 15:44:14.172680 <INFO> :BlockIOManager Workers=1 OneWorkerPerVolume=1
+2021-07-20 15:44:14.188304 <INFO> :Executing the system script:  C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server/dolphindb.dos
+2021-07-20 15:44:14.922506 <INFO> :alias = agent1
+2021-07-20 15:44:14.922506 <INFO> :host = 127.0.0.1
+2021-07-20 15:44:14.922506 <INFO> :port = 22212
+2021-07-20 15:44:14.922506 <INFO> :mode = agent
+2021-07-20 15:44:14.922506 <INFO> :coreNum = 16
+2021-07-20 15:44:14.922506 <INFO> :maxNodeNum(license) = 3
+2021-07-20 15:44:14.922506 <INFO> :maxMemSize(GB) = 1
+2021-07-20 15:44:14.922506 <INFO> :workerNum = 16
+2021-07-20 15:44:14.922506 <INFO> :localExecutors = 1
+2021-07-20 15:44:14.922506 <INFO> :remoteExecutors = 0
+2021-07-20 15:44:14.922506 <INFO> :maxConnections(inward) = 32
+2021-07-20 15:44:14.922506 <INFO> :maxConnections(outward) = 0
+2021-07-20 15:44:14.922506 <INFO> :maxConnectionPerSite(outward) = 18
+2021-07-20 15:44:14.922506 <INFO> :maxMsgNumPerBlock =1024
+2021-07-20 15:44:14.922506 <INFO> :maxPubConnections = 0
+2021-07-20 15:44:14.922506 <INFO> :maxSubConnections = 64
+2021-07-20 15:44:14.922506 <INFO> :subPort = 0
+2021-07-20 15:44:14.922506 <INFO> :subExecutors = 1
+2021-07-20 15:44:14.922506 <INFO> :subExecutorPooling = 0
+2021-07-20 15:44:14.922506 <INFO> :Job schedule initialized successfully.
+2021-07-20 15:44:55.833732 <INFO> :Received exit event.
+2021-07-20 15:44:55.833732 <INFO> :The local executor thread 0 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 0 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 1 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 2 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 3 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 5 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 7 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 4 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 6 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 9 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 8 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 11 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 10 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 12 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 13 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 14 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 15 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 16 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 0 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 1 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 2 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 3 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 4 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 5 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 6 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 7 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 8 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 9 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 10 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 11 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 13 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 12 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 15 terminated peacefully.
+2021-07-20 15:44:55.833732 <INFO> :Worker Thread 14 terminated peacefully.
+2021-07-20 15:44:55.865119 <INFO> :HeatBeatSender terminated peacefully.
+2021-07-20 15:44:55.865119 <INFO> :The inbound socket thread terminated peacefully.
+2021-07-20 15:44:55.865119 <ERROR> :The socket server ended.
+2021-07-20 15:44:56.036952 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 5
+2021-07-20 15:44:56.240142 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 5
+2021-07-20 15:44:56.318251 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-20 15:44:56.333798 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-20 15:44:56.333798 <INFO> :DynamicWorkerManager Thread  terminated peacefully.
+2021-07-20 15:44:56.333798 <INFO> :BackgroundRoutineService terminated peacefully.
+2021-07-20 15:44:56.443208 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:44:56.646305 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:44:56.849323 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:44:57.052383 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:44:57.255457 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:44:57.458538 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:44:57.661684 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:44:57.864677 <INFO> :Remaining workers = 1 executors = 0 otherThreads = 1
+2021-07-20 15:44:57.864677 <INFO> :MainServer shutdown.
+
+2021-07-20 15:47:20.330896 <INFO> :localExecutors = 1
+2021-07-20 15:47:20.330896 <INFO> :maxMemSize = 1
+2021-07-20 15:47:20.330896 <INFO> :localSite = 127.0.0.1:22212:agent1
+2021-07-20 15:47:20.330896 <INFO> :mode = agent
+2021-07-20 15:47:20.330896 <INFO> :config = config/agent.cfg
+2021-07-20 15:47:20.330896 <INFO> :home = data
+2021-07-20 15:47:20.330896 <INFO> :controllerSite = 127.0.0.1:22210:controller1
+2021-07-20 15:47:20.330896 <INFO> :logFile = log/agent.log
+2021-07-20 15:47:20.330896 <INFO> :script = dolphindb.dos
+2021-07-20 15:47:20.330896 <INFO> :starting dolphindb sever...
+2021-07-20 15:47:20.330896 <INFO> :cpu affinity [0,1]
+2021-07-20 15:47:20.330896 <INFO> :BlockIOManager Workers=1 OneWorkerPerVolume=1
+2021-07-20 15:47:20.362167 <INFO> :Executing the system script:  C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server/dolphindb.dos
+2021-07-20 15:47:21.096588 <INFO> :alias = agent1
+2021-07-20 15:47:21.096588 <INFO> :host = 127.0.0.1
+2021-07-20 15:47:21.096588 <INFO> :port = 22212
+2021-07-20 15:47:21.096588 <INFO> :mode = agent
+2021-07-20 15:47:21.096588 <INFO> :coreNum = 16
+2021-07-20 15:47:21.096588 <INFO> :maxNodeNum(license) = 3
+2021-07-20 15:47:21.096588 <INFO> :maxMemSize(GB) = 1
+2021-07-20 15:47:21.096588 <INFO> :workerNum = 16
+2021-07-20 15:47:21.096588 <INFO> :localExecutors = 1
+2021-07-20 15:47:21.096588 <INFO> :remoteExecutors = 0
+2021-07-20 15:47:21.096588 <INFO> :maxConnections(inward) = 32
+2021-07-20 15:47:21.096588 <INFO> :maxConnections(outward) = 0
+2021-07-20 15:47:21.096588 <INFO> :maxConnectionPerSite(outward) = 18
+2021-07-20 15:47:21.096588 <INFO> :maxMsgNumPerBlock =1024
+2021-07-20 15:47:21.096588 <INFO> :maxPubConnections = 0
+2021-07-20 15:47:21.096588 <INFO> :maxSubConnections = 64
+2021-07-20 15:47:21.096588 <INFO> :subPort = 0
+2021-07-20 15:47:21.096588 <INFO> :subExecutors = 1
+2021-07-20 15:47:21.096588 <INFO> :subExecutorPooling = 0
+2021-07-20 15:47:21.096588 <INFO> :Job schedule initialized successfully.
+2021-07-20 15:47:21.096588 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 15:47:21.096588 <INFO> :New connection from ip = 127.0.0.1 port = 57569
+2021-07-20 15:47:21.096588 <ERROR> :Received FD_CLOSE
+2021-07-20 15:47:21.096588 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 15:47:39.492199 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 15:47:39.492199 <INFO> :New connection from ip = 127.0.0.1 port = 58379
+2021-07-20 15:47:39.493197 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode2 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22213:datanode2  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.err.txt
+2021-07-20 15:47:39.654609 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode2 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22213:datanode2  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.err.txt
+2021-07-20 15:47:39.655606 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:47:39.676550 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-20 15:47:39.677548 <ERROR> :Received FD_CLOSE
+2021-07-20 15:47:39.677548 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 16:21:13.173734 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 16:21:13.174732 <INFO> :New connection from ip = 127.0.0.1 port = 62211
+2021-07-20 16:21:13.174732 <ERROR> :The web path is empty. It's possible that webRoot is not specified or the web dir does not exist under home, working or executable dir.
+2021-07-20 16:21:13.175729 <INFO> :Created a new socket connection. Number of connections: 2
+2021-07-20 16:21:13.186699 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:21:13.214173 <INFO> :Close a connection with index=1. Number of remaining connections: 1
+2021-07-20 16:21:13.214173 <INFO> :New connection from ip = 127.0.0.1 port = 63392
+2021-07-20 16:21:13.214173 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:21:13.246061 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 16:21:13.246061 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 16:21:13.247064 <INFO> :New connection from ip = 127.0.0.1 port = 56950
+2021-07-20 16:21:13.247064 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:21:13.277415 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 16:21:47.543055 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 16:21:47.543055 <INFO> :New connection from ip = 127.0.0.1 port = 59938
+2021-07-20 16:21:47.543055 <ERROR> :The web path is empty. It's possible that webRoot is not specified or the web dir does not exist under home, working or executable dir.
+2021-07-20 16:21:47.545050 <INFO> :Created a new socket connection. Number of connections: 2
+2021-07-20 16:21:47.556020 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:21:47.579353 <INFO> :Close a connection with index=1. Number of remaining connections: 1
+2021-07-20 16:21:47.579353 <INFO> :New connection from ip = 127.0.0.1 port = 53487
+2021-07-20 16:21:47.579353 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:21:47.611632 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 16:21:47.611632 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 16:21:47.612651 <INFO> :New connection from ip = 127.0.0.1 port = 54550
+2021-07-20 16:21:47.612651 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:21:47.643306 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 16:22:10.038528 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 16:22:10.039525 <INFO> :New connection from ip = 127.0.0.1 port = 50062
+2021-07-20 16:22:10.039525 <ERROR> :The web path is empty. It's possible that webRoot is not specified or the web dir does not exist under home, working or executable dir.
+2021-07-20 16:22:10.039525 <INFO> :Created a new socket connection. Number of connections: 2
+2021-07-20 16:22:10.054485 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:22:10.083685 <INFO> :Close a connection with index=1. Number of remaining connections: 1
+2021-07-20 16:22:10.083685 <INFO> :New connection from ip = 127.0.0.1 port = 63883
+2021-07-20 16:22:10.083685 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:22:10.114389 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 16:22:10.116394 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 16:22:10.117445 <INFO> :New connection from ip = 127.0.0.1 port = 53483
+2021-07-20 16:22:10.117445 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:22:10.145636 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 16:22:27.841897 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 16:22:27.842894 <INFO> :New connection from ip = 127.0.0.1 port = 50056
+2021-07-20 16:27:50.167556 <ERROR> :Received FD_CLOSE
+2021-07-20 16:27:50.167556 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 16:27:54.926848 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 16:27:54.926848 <INFO> :New connection from ip = 127.0.0.1 port = 51427
+2021-07-20 16:27:54.926848 <ERROR> :The web path is empty. It's possible that webRoot is not specified or the web dir does not exist under home, working or executable dir.
+2021-07-20 16:27:54.926848 <INFO> :Created a new socket connection. Number of connections: 2
+2021-07-20 16:27:54.937818 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:27:54.965482 <INFO> :Close a connection with index=1. Number of remaining connections: 1
+2021-07-20 16:27:54.965482 <INFO> :New connection from ip = 127.0.0.1 port = 63732
+2021-07-20 16:27:54.965482 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:27:54.996345 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 16:27:54.996345 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 16:27:54.996345 <INFO> :New connection from ip = 127.0.0.1 port = 51437
+2021-07-20 16:27:54.996345 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:27:55.029794 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 16:31:21.565274 <INFO> :Clear expired session 884862900
+2021-07-20 16:31:21.565274 <INFO> :Clear expired session 911644588
+2021-07-20 16:31:21.565274 <INFO> :Clear expired session 597793698
+2021-07-20 16:32:21.581115 <INFO> :Clear expired session 1130397736
+2021-07-20 16:32:21.581115 <INFO> :Clear expired session 10133680
+2021-07-20 16:32:21.581115 <INFO> :Clear expired session 336534491
+2021-07-20 16:32:21.581115 <INFO> :Clear expired session 1814142937
+2021-07-20 16:32:21.581115 <INFO> :Clear expired session 319126470
+2021-07-20 16:32:21.581115 <INFO> :Clear expired session 261067698
+2021-07-20 16:32:43.291620 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 16:32:43.292618 <INFO> :New connection from ip = 127.0.0.1 port = 59490
+2021-07-20 16:33:21.587974 <INFO> :Clear expired session 400435227
+2021-07-20 16:37:43.517809 <ERROR> :Received FD_CLOSE
+2021-07-20 16:37:43.517809 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 16:38:21.637517 <INFO> :Clear expired session 1773505288
+2021-07-20 16:38:21.637517 <INFO> :Clear expired session 451202930
+2021-07-20 16:38:21.637517 <INFO> :Clear expired session 1440422690
+2021-07-20 16:43:21.733297 <INFO> :Clear expired session 972251538
+2021-07-20 16:44:01.124689 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 16:44:01.124689 <INFO> :Created a new socket connection. Number of connections: 2
+2021-07-20 16:44:01.125686 <INFO> :New connection from ip = 127.0.0.1 port = 59382
+2021-07-20 16:44:01.125686 <ERROR> :The web path is empty. It's possible that webRoot is not specified or the web dir does not exist under home, working or executable dir.
+2021-07-20 16:44:01.137654 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:44:01.165226 <INFO> :Close a connection with index=1. Number of remaining connections: 1
+2021-07-20 16:44:01.166222 <INFO> :New connection from ip = 127.0.0.1 port = 53705
+2021-07-20 16:44:01.166222 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:44:01.196329 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 16:44:01.196329 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 16:44:01.197332 <INFO> :New connection from ip = 127.0.0.1 port = 59352
+2021-07-20 16:44:01.197332 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:44:01.227844 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 16:44:07.210869 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 16:44:07.211867 <INFO> :New connection from ip = 127.0.0.1 port = 50536
+2021-07-20 16:47:11.991038 <INFO> :Created a new socket connection. Number of connections: 2
+2021-07-20 16:47:11.991038 <INFO> :New connection from ip = 127.0.0.1 port = 57783
+2021-07-20 16:47:11.991038 <ERROR> :The web path is empty. It's possible that webRoot is not specified or the web dir does not exist under home, working or executable dir.
+2021-07-20 16:47:11.992036 <INFO> :Created a new socket connection. Number of connections: 3
+2021-07-20 16:47:12.003007 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:47:12.031811 <INFO> :Close a connection with index=2. Number of remaining connections: 2
+2021-07-20 16:47:12.031811 <INFO> :New connection from ip = 127.0.0.1 port = 55776
+2021-07-20 16:47:12.031811 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:47:12.062994 <INFO> :Close a connection with index=2. Number of remaining connections: 1
+2021-07-20 16:47:12.064035 <INFO> :Created a new socket connection. Number of connections: 2
+2021-07-20 16:47:12.066035 <INFO> :New connection from ip = 127.0.0.1 port = 65491
+2021-07-20 16:47:12.066035 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:47:12.094031 <INFO> :Close a connection with index=2. Number of remaining connections: 1
+2021-07-20 16:52:27.204277 <INFO> :Created a new socket connection. Number of connections: 2
+2021-07-20 16:52:27.204277 <INFO> :New connection from ip = 127.0.0.1 port = 63349
+2021-07-20 16:52:27.204277 <ERROR> :The web path is empty. It's possible that webRoot is not specified or the web dir does not exist under home, working or executable dir.
+2021-07-20 16:52:27.205275 <INFO> :Created a new socket connection. Number of connections: 3
+2021-07-20 16:52:27.216246 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:52:27.244325 <INFO> :Close a connection with index=2. Number of remaining connections: 2
+2021-07-20 16:52:27.244325 <INFO> :New connection from ip = 127.0.0.1 port = 62588
+2021-07-20 16:52:27.244325 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:52:27.276263 <INFO> :Close a connection with index=2. Number of remaining connections: 1
+2021-07-20 16:52:27.276263 <INFO> :Created a new socket connection. Number of connections: 2
+2021-07-20 16:52:27.277309 <INFO> :New connection from ip = 127.0.0.1 port = 61018
+2021-07-20 16:52:27.277309 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:52:27.306764 <INFO> :Close a connection with index=2. Number of remaining connections: 1
+2021-07-20 16:54:21.907133 <INFO> :Clear expired session 1235003533
+2021-07-20 16:54:21.907133 <INFO> :Clear expired session 1868617081
+2021-07-20 16:54:21.907133 <INFO> :Clear expired session 293575161
+2021-07-20 16:55:58.808314 <ERROR> :Received FD_CLOSE
+2021-07-20 16:55:58.808314 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 16:57:21.966717 <INFO> :Clear expired session 1340699574
+2021-07-20 16:57:21.966717 <INFO> :Clear expired session 1914099315
+2021-07-20 16:57:21.966717 <INFO> :Clear expired session 449258143
+2021-07-20 16:59:42.008037 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 16:59:42.009036 <INFO> :New connection from ip = 127.0.0.1 port = 56419
+2021-07-20 16:59:42.009036 <ERROR> :The web path is empty. It's possible that webRoot is not specified or the web dir does not exist under home, working or executable dir.
+2021-07-20 16:59:42.009036 <INFO> :Created a new socket connection. Number of connections: 2
+2021-07-20 16:59:42.024992 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:59:42.055201 <INFO> :Close a connection with index=1. Number of remaining connections: 1
+2021-07-20 16:59:42.055201 <INFO> :New connection from ip = 127.0.0.1 port = 61055
+2021-07-20 16:59:42.055201 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:59:42.086016 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 16:59:42.086016 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 16:59:42.087028 <INFO> :New connection from ip = 127.0.0.1 port = 52489
+2021-07-20 16:59:42.087028 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 16:59:42.116899 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 17:01:22.037006 <INFO> :Clear expired session 136753992
+2021-07-20 17:03:22.067006 <INFO> :Clear expired session 1207522046
+2021-07-20 17:03:22.067006 <INFO> :Clear expired session 397989321
+2021-07-20 17:03:22.067006 <INFO> :Clear expired session 1123880734
+2021-07-20 17:06:13.992471 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 17:06:13.992471 <INFO> :New connection from ip = 127.0.0.1 port = 60075
+2021-07-20 17:06:13.992471 <ERROR> :The web path is empty. It's possible that webRoot is not specified or the web dir does not exist under home, working or executable dir.
+2021-07-20 17:06:13.993469 <INFO> :Created a new socket connection. Number of connections: 2
+2021-07-20 17:06:14.005437 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 17:06:14.040470 <INFO> :Close a connection with index=1. Number of remaining connections: 1
+2021-07-20 17:06:14.040470 <INFO> :New connection from ip = 127.0.0.1 port = 61112
+2021-07-20 17:06:14.040470 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 17:06:14.072205 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 17:06:14.072205 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 17:06:14.072205 <INFO> :New connection from ip = 127.0.0.1 port = 65220
+2021-07-20 17:06:14.072205 <ERROR> :Requested http file type [/favicon.ico] is unsupported.
+2021-07-20 17:06:14.103444 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 17:08:30.262205 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-20 17:08:30.263203 <INFO> :New connection from ip = 127.0.0.1 port = 59710
+2021-07-20 17:10:22.216555 <INFO> :Clear expired session 471796780
+2021-07-20 17:10:22.216555 <INFO> :Clear expired session 12492335
+2021-07-20 17:10:22.216555 <INFO> :Clear expired session 232737605
+2021-07-20 17:13:37.216319 <ERROR> :Received FD_CLOSE
+2021-07-20 17:13:37.216319 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-20 17:16:22.337985 <INFO> :Clear expired session 660186306
+2021-07-20 17:16:22.337985 <INFO> :Clear expired session 2040505271
+2021-07-20 17:16:22.337985 <INFO> :Clear expired session 2101578574
+2021-07-20 17:19:22.378402 <INFO> :Clear expired session 1743076291
+2021-07-21 09:31:11.190510 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-21 09:31:11.190510 <INFO> :New connection from ip = 127.0.0.1 port = 49896
+2021-07-21 09:36:58.310919 <INFO> :Clear expired http(json) console with index = 0
+2021-07-21 09:36:58.310919 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-21 09:41:58.431458 <INFO> :Clear expired session 271987920
+2021-07-21 10:00:24.750736 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-21 10:00:24.750736 <INFO> :New connection from ip = 127.0.0.1 port = 52041
+2021-07-21 10:05:58.889780 <INFO> :Clear expired http(json) console with index = 0
+2021-07-21 10:05:58.889780 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-21 10:10:58.989561 <INFO> :Clear expired session 369240513
+2021-07-21 11:06:51.085304 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-21 11:06:51.085304 <INFO> :New connection from ip = 127.0.0.1 port = 56419
+2021-07-21 11:13:00.207600 <INFO> :Clear expired http(json) console with index = 0
+2021-07-21 11:13:00.207600 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-21 11:18:00.303454 <INFO> :Clear expired session 169625159
+2021-07-26 09:08:56.723081 <INFO> :localExecutors = 1
+2021-07-26 09:08:56.723081 <INFO> :maxMemSize = 1
+2021-07-26 09:08:56.723081 <INFO> :localSite = 127.0.0.1:22212:agent1
+2021-07-26 09:08:56.723081 <INFO> :mode = agent
+2021-07-26 09:08:56.723081 <INFO> :config = config/agent.cfg
+2021-07-26 09:08:56.723081 <INFO> :home = data
+2021-07-26 09:08:56.723081 <INFO> :controllerSite = 127.0.0.1:22210:controller1
+2021-07-26 09:08:56.723081 <INFO> :logFile = log/agent.log
+2021-07-26 09:08:56.723081 <INFO> :script = dolphindb.dos
+2021-07-26 09:08:56.723081 <INFO> :starting dolphindb sever...
+2021-07-26 09:08:56.723081 <INFO> :cpu affinity [0,1]
+2021-07-26 09:08:56.723081 <INFO> :BlockIOManager Workers=1 OneWorkerPerVolume=1
+2021-07-26 09:08:56.754654 <INFO> :Executing the system script:  C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server/dolphindb.dos
+2021-07-26 09:08:57.488699 <INFO> :alias = agent1
+2021-07-26 09:08:57.488699 <INFO> :host = 127.0.0.1
+2021-07-26 09:08:57.488699 <INFO> :port = 22212
+2021-07-26 09:08:57.488699 <INFO> :mode = agent
+2021-07-26 09:08:57.488699 <INFO> :coreNum = 16
+2021-07-26 09:08:57.488699 <INFO> :maxNodeNum(license) = 3
+2021-07-26 09:08:57.488699 <INFO> :maxMemSize(GB) = 1
+2021-07-26 09:08:57.488699 <INFO> :workerNum = 16
+2021-07-26 09:08:57.488699 <INFO> :localExecutors = 1
+2021-07-26 09:08:57.488699 <INFO> :remoteExecutors = 0
+2021-07-26 09:08:57.488699 <INFO> :maxConnections(inward) = 32
+2021-07-26 09:08:57.488699 <INFO> :maxConnections(outward) = 0
+2021-07-26 09:08:57.488699 <INFO> :maxConnectionPerSite(outward) = 18
+2021-07-26 09:08:57.488699 <INFO> :maxMsgNumPerBlock =1024
+2021-07-26 09:08:57.488699 <INFO> :maxPubConnections = 0
+2021-07-26 09:08:57.488699 <INFO> :maxSubConnections = 64
+2021-07-26 09:08:57.488699 <INFO> :subPort = 0
+2021-07-26 09:08:57.488699 <INFO> :subExecutors = 1
+2021-07-26 09:08:57.488699 <INFO> :subExecutorPooling = 0
+2021-07-26 09:08:57.488699 <INFO> :Job schedule initialized successfully.
+2021-07-26 09:09:01.612588 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-26 09:09:01.612588 <INFO> :New connection from ip = 127.0.0.1 port = 55450
+2021-07-26 09:09:01.612588 <ERROR> :Received FD_CLOSE
+2021-07-26 09:09:01.612588 <INFO> :Close a connection with index=1. Number of remaining connections: 0
+2021-07-26 09:09:58.472563 <INFO> :Created a new socket connection. Number of connections: 1
+2021-07-26 09:09:58.472563 <INFO> :New connection from ip = 127.0.0.1 port = 51324
+2021-07-26 09:09:58.474556 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode2 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22213:datanode2  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.err.txt
+2021-07-26 09:09:58.613264 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode2 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22213:datanode2  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode2.err.txt
+2021-07-26 09:09:58.613264 <INFO> :receive startDataNodeAgent :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-26 09:09:58.630962 <INFO> :complete startDataNodeAgent  :start /b ..\dolphindb.exe -home C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/datanode1 -logFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.log -jobLogFile C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1_job.log -keyPath C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/data/agent1/keys -mode datanode -console 0 -localSite 127.0.0.1:22214:datanode1  -webLoginRequired 0 -lanCluster 1 -maxConnections 512 -sites 127.0.0.1:22213:datanode2,127.0.0.1:22214:datanode1,127.0.0.1:22210:controller1:controller -enableHTTPS 0 -subPort 8000 -dfsReplicationFactor 1 -workerNum 4 -dataSync 1 -maxPubConnections 8 -newValuePartitionPolicy add -persistenceDir persisDir -config /noconfig -chunkCacheEngineMemSize 2 -controllerSite 127.0.0.1:22210:controller1 -perfMonitoring 1 >> C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.output.txt 2 > C:\Users\jfyao\Downloads\DolphinDB_Win64_V1.30.11\server\clusterDemo/log/datanode1.err.txt
+2021-07-26 09:09:58.630962 <ERROR> :Received FD_CLOSE
+2021-07-26 09:09:58.630962 <INFO> :Close a connection with index=1. Number of remaining connections: 0
