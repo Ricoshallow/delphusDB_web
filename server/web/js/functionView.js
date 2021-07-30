@@ -39,17 +39,17 @@ $("#btnLogout").bind("click", function () {
     })
 });
 
-var codeMirrorEditor = function(element, width, height) {
+var codeMirrorEditor = function (element, width, height) {
     var editor = CodeMirror.fromTextArea(element, {
-    //     showCursorWhenSelecting: true,
-    //     cursorHeight: 0.85,
-    //     lineNumbers: true,
-    //     styleActiveLine: true,
-    //     mode: 'text/x-ddb',
-    //     lineWrapping: true,
-    // 　  readOnly: false,
-    //     styleActiveLine: true,
-    //     matchBrackets: true
+        //     showCursorWhenSelecting: true,
+        //     cursorHeight: 0.85,
+        //     lineNumbers: true,
+        //     styleActiveLine: true,
+        //     mode: 'text/x-ddb',
+        //     lineWrapping: true,
+        // 　  readOnly: false,
+        //     styleActiveLine: true,
+        //     matchBrackets: true
         mode: 'text/x-ddb',
         indentWithTabs: true,
         smartIndent: true,
@@ -57,31 +57,35 @@ var codeMirrorEditor = function(element, width, height) {
         matchBrackets: true,
         autofocus: true,
         viewportMargin: Infinity,
-        extraKeys: { "Ctrl-Alt-Space": "autocomplete" },
+        extraKeys: {
+            "Ctrl-Alt-Space": "autocomplete"
+        },
         hintOptions: {
             tables: {
-                
+
             }
         }
     });
-    
+
     editor.setSize(width, height);
     return editor;
 };
 
-var newFuncEditor = codeMirrorEditor($("#newFuncView")[0], 900, 200);
-var updateFuncEditor = codeMirrorEditor($("#updateFuncView")[0], 900, 200);
+
+var newFuncEditor 
+var updateFuncEditor
+// var updateFuncEditor = codeMirrorEditor($("#updateFuncView")[0], 900, 200);
 
 
-var swapCheck = function() {
+var swapCheck = function () {
     if (isCheckAll) {
-        $("input[type='checkbox']").each(function() {
+        $("input[type='checkbox']").each(function () {
             this.checked = false;
         });
         isCheckAll = false;
         selectedFuncViews = [];
     } else {
-        $("input[type='checkbox']").each(function() {
+        $("input[type='checkbox']").each(function () {
             this.checked = true;
         })
         isCheckAll = true;
@@ -92,12 +96,15 @@ var swapCheck = function() {
         for (var i = 0; i < nameList.length; i++) {
             var name = nameList[i];
             var body = bodyList[i];
-            selectedFuncViews.push({"name": name, "body": body});
+            selectedFuncViews.push({
+                "name": name,
+                "body": body
+            });
         }
     }
 }
 
-var getAllFuncViews = function() {
+var getAllFuncViews = function () {
     var re = nodeApi.getFunctionViews();
     // console.log(re);
     if (re.resultCode === "1") {
@@ -110,7 +117,7 @@ var getAllFuncViews = function() {
         // body
         var bodyList = res.value[1].value;
         var ent = []
-        for (var i=0;i<nameList.length;i++){
+        for (var i = 0; i < nameList.length; i++) {
             var obj = {}
             obj['name'] = nameList[i]
             obj['body'] = bodyList[i]
@@ -123,38 +130,49 @@ var getAllFuncViews = function() {
         for (var i = 0; i < nameList.length; i++) {
             var name = nameList[i];
             var body = bodyList[i];
-            allFunctionViews.push({"name": name, "body": body});
+            allFunctionViews.push({
+                "name": name,
+                "body": body
+            });
         }
-     
+
         $("#functionViewTable").jsGrid({
             width: "100%",
             // height: "400px",
             data: ent,
             resize: true,
-            fields: [
-                {
-                    name: "FuncName", type: "text", width: 50, align: "center",
+            fields: [{
+                    name: "FuncName",
+                    type: "text",
+                    width: 50,
+                    align: "center",
                     itemTemplate: function (value, item) {
                         // console.log(item);
                         return `<p>${item.name}</p>`
                     }
                 },
                 {
-                    name: "FuncDescription", type: "text", width: 500, align: "center",
+                    name: "FuncDescription",
+                    type: "text",
+                    width: 500,
+                    align: "center",
                     itemTemplate: function (value, item) {
-                       
+
                         return `<p>${item.body}</p>`
                     }
                 },
                 {
-                    name: "Setting", type: "text", width: 50, align: "center",
+                    name: "Setting",
+                    type: "text",
+                    width: 50,
+                    align: "center",
                     itemTemplate: function (value, item) {
-                       
-                        return `<a href='###' class='btnUpdateFunctionView' data-value="${item.name}">Update<i class="Hui-iconfont">&#xe647;</i></a>`
+
+                        return `<a href='###'  data-value="${item.name}" onclick="btnUpdateFunctionView('${item.name}')">Update<i class="Hui-iconfont">&#xe647;</i></a>`
                     }
                 },
-                
-               
+
+
                 {
                     headerTemplate: function () {
                         return "<a href='###' onclick='swapCheck()' >Select All <i class='Hui-iconfont'>&#xe676;</i></a>"
@@ -172,15 +190,36 @@ var getAllFuncViews = function() {
     }
 };
 
+var addDialog = `    <dialog id="newFuncViewDialog">
+<form method="dialog">
+  <p>
+      <label>Add new function to DolphinDB Function View:</label>
+      <div id="cm_container" class="panel panel-default" style="margin-bottom: 10px;min-height:150px;max-height:255px; overflow-y:auto">
+          <textarea id="newFuncView" cols="5" style="width:100%;"></textarea>
+      </div>
+        
+   
+</p>
+  <menu  class="text-center" style="padding-inline-start: 0px;">
+    <button class="btn btn-sm  btn-info" id="confirmFuncViewBtn" value="default" >Confirm</button>
+    <button class="btn btn-sm btn-light" value="cancel">Cancel</button>
+  </menu>
+</form>
+</dialog>`
+
 $("#btnAddFunctionView").bind("click", function (e) {
-    var newFuncViewDialog = $("#newFuncViewDialog");
-    // $("#newFuncView").val("");
-    newFuncViewDialog[0].showModal();
+    $('body').remove("#newFuncViewDialog")
+    $('body').prepend(addDialog)
+    $("#newFuncViewDialog")[0].showModal();
+    newFuncEditor = codeMirrorEditor($("#newFuncView")[0], 900, 200);
     newFuncEditor.setValue("  ");
     $("#confirmFuncViewBtn").bind("click", function (e) {
+        // console.log('confirm add func');
         // var userInput = $("#newFuncView").val();
         var userInput = newFuncEditor.getValue();
-        nodeApi.runSync(userInput);
+        var test = nodeApi.runSync(userInput);
+        // console.log(test);
+        // console.log(userInput);
         var i = userInput.indexOf("def");
         var j = userInput.indexOf("(");
         if (i === -1 || j === -1) {
@@ -208,24 +247,43 @@ $("#btnDeleteFunctionView").bind("click", function (e) {
     }
 });
 
-$("#functionViewTable").on("click", ".btnUpdateFunctionView", function (e) {
-    // previous function name
-    // console.log($(this)[0].dataset.value);
-    
-    var selectedFuncName = $(this)[0].dataset.value;
-    console.log(selectedFuncName);
-    var updateFuncViewDialog = $("#updateFuncViewDialog");
-    updateFuncViewDialog[0].showModal();
+
+var updatedialog = ` 
+<dialog id="updateFuncViewDialog">
+    <form method="dialog">
+      <p>
+          <label>Update function in DolphinDB Function View:</label>
+        <div id="cm_container" class="panel panel-default" style="margin-bottom: 10px;min-height:150px;max-height:255px; overflow-y:auto">
+            <textarea id="updateFuncView" cols="5" style="width:100%;"></textarea>
+        </div>
+          
+      
+    </p>
+      <menu  class="text-center" style="padding-inline-start: 0px;">
+        <button class="btn btn-sm btn-info" id="confirmUpdateBtn" value="default">Confirm</button>
+        <button class="btn btn-sm btn-light" value="cancel">Cancel</button>
+      </menu>
+    </form>
+</dialog>`
+
+var btnUpdateFunctionView = function (funcName) {
+    $('body').remove("#updateFuncViewDialog")
+    $('body').prepend(updatedialog)
+    console.log(funcName);
+    updateFuncEditor = codeMirrorEditor($("#updateFuncView")[0], 900, 200);
+    $("#updateFuncViewDialog")[0].showModal();
     for (var i = 0; i < allFunctionViews.length; i++) {
         var currFuncName = allFunctionViews[i]["name"];
-        if (currFuncName === selectedFuncName) {
-            console.log();
+        if (currFuncName === funcName) {
             updateFuncEditor.setValue(allFunctionViews[i]["body"]);
         }
     }
-    
+
     $("#confirmUpdateBtn").bind("click", function (e) {
+        console.log(e);
+        e.stopPropagation()
         var updatedInput = updateFuncEditor.getValue();
+        // console.log(updatedInput);
         var i = updatedInput.indexOf("def");
         var j = updatedInput.indexOf("(");
         if (i === -1 || j === -1) {
@@ -233,17 +291,22 @@ $("#functionViewTable").on("click", ".btnUpdateFunctionView", function (e) {
             return;
         }
         // new function name
-        var funcName = updatedInput.substring(i + 3, j).trim();
+        var newFuncName = updatedInput.substring(i + 3, j).trim();
+
         // drop and then add
-        nodeApi.dropFunctionView(selectedFuncName);
+        nodeApi.dropFunctionView(funcName);
         nodeApi.runSync(updatedInput);
-        nodeApi.addFunctionView(funcName);
+        console.log(updatedInput);
+        nodeApi.addFunctionView(newFuncName);
         getAllFuncViews();
+
     });
-    selectedFuncViews = [];
-});
+}
+
+
 
 $("#functionViewTable").on("change", ".funcView", function () {
+
     // name
     var name = $(this).val();
     // body
@@ -268,13 +331,15 @@ $("#functionViewTable").on("change", ".funcView", function () {
 });
 
 // refresh handler
-$('#btn_refresh').bind('click',function(){
+$('#btn_refresh').bind('click', function () {
     getAllFuncViews()
 })
 
 // searchboxs
-$('#searchbox').keyup(function(){
+$('#searchbox').keyup(function () {
     // console.log('1');
-    $("table tbody tr").hide().filter(":contains('" + ($(this).val()) + "')" ).show()
+    $("table tbody tr").hide().filter(":contains('" + ($(this).val()) + "')").show()
 
 })
+
+$("dialog")

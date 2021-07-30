@@ -17,7 +17,8 @@ var bindGrid = function () {
     ctlApi.getGroupList(function (re) {
         //var ent = [{ groupId: "dev" }, { groupId: "dolphindbGroup" }, { groupId: "hangzhou" }]
         var ent = re;
-        // console.log(re);
+        console.log(re);
+        if (typeof ent[0] !== 'object'){ent = []}
         $('#jsgrid').jsGrid({
             width: "100%",
             // height: "400px",

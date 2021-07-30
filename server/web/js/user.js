@@ -15,7 +15,7 @@ var bindGrid = function () {
     ctlApi = new ControllerServer(controllerUrl);
     ctlApi.getUserList(function (re) {
         var ent = re;
-        // console.log(ent);
+        console.log(ent);
         $('#jsgrid').jsGrid({
             width: "100%",
             // height: "400px",
