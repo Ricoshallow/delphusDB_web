@@ -452,6 +452,7 @@ $('#btn_execode').click(function () {
 
     var logstr = HtmlEncode(codestr);
 
+    //encoding
     codestr = encodeURIComponent(codestr);
 
     var retrieveRowNumber = parseInt($('#retrieve-row-number').val(), 10);

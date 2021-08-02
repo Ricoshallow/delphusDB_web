@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="DolphinDB Node Management">
     <meta name="author" content="DolphinDB">
+    <link rel="stylesheet" type="text/css" href="./lib/Hui-iconfont/1.0.8/iconfont.css" />
     <link rel="stylesheet" href="third-party/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="third-party/bootstrap/css/font-awesome.min.css">
     <link rel="stylesheet" href="third-party/bootstrap/css/docs.css">
@@ -35,9 +36,14 @@
         <div class="row">
             <div class="panel-body">
                 <div class="btn-toolbar" role="toolbar">
-                    <div id="nodes">
+                    <div id="nodes" style="display: inline-block;">
 
                     </div>
+
+                    <button type="button" class="btn btn-default" id="btn_refresh"
+                    style="background-color: #019FCC; color: white; margin: 8px 0; display: inline-block;"><i
+                        class="Hui-iconfont">&#xe68f;</i></button>
+
                     <div class="input-group" style="margin-top: 20px; width: 30%;">
                         <input type="text" id="searchbox" class="form-control" >
                         <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>

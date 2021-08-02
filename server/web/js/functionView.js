@@ -208,7 +208,7 @@ var addDialog = `    <dialog id="newFuncViewDialog">
 </dialog>`
 
 $("#btnAddFunctionView").bind("click", function (e) {
-    $('body').remove("#newFuncViewDialog")
+    $("#newFuncViewDialog").remove()
     $('body').prepend(addDialog)
     $("#newFuncViewDialog")[0].showModal();
     newFuncEditor = codeMirrorEditor($("#newFuncView")[0], 900, 200);
@@ -217,6 +217,8 @@ $("#btnAddFunctionView").bind("click", function (e) {
         // console.log('confirm add func');
         // var userInput = $("#newFuncView").val();
         var userInput = newFuncEditor.getValue();
+        // encoding
+        userInput = encodeURIComponent(userInput)
         var test = nodeApi.runSync(userInput);
         // console.log(test);
         // console.log(userInput);
@@ -224,10 +226,15 @@ $("#btnAddFunctionView").bind("click", function (e) {
         var j = userInput.indexOf("(");
         if (i === -1 || j === -1) {
             alert("Please provide a valid function definition");
-            return;
+            return false;
+        }
+        if (test.resultCode === '1'){
+            alert(test.msg)
+            return false
         }
         var funcName = userInput.substring(i + 3, j).trim();
         nodeApi.addFunctionView(funcName);
+       
         getAllFuncViews();
     });
 });
@@ -267,7 +274,7 @@ var updatedialog = `
 </dialog>`
 
 var btnUpdateFunctionView = function (funcName) {
-    $('body').remove("#updateFuncViewDialog")
+    $("#updateFuncViewDialog").remove()
     $('body').prepend(updatedialog)
     console.log(funcName);
     updateFuncEditor = codeMirrorEditor($("#updateFuncView")[0], 900, 200);
@@ -280,7 +287,7 @@ var btnUpdateFunctionView = function (funcName) {
     }
 
     $("#confirmUpdateBtn").bind("click", function (e) {
-        console.log(e);
+        // console.log(e);
         e.stopPropagation()
         var updatedInput = updateFuncEditor.getValue();
         // console.log(updatedInput);
@@ -288,15 +295,20 @@ var btnUpdateFunctionView = function (funcName) {
         var j = updatedInput.indexOf("(");
         if (i === -1 || j === -1) {
             alert("Please provide a valid function definition");
-            return;
+            return false;
         }
         // new function name
         var newFuncName = updatedInput.substring(i + 3, j).trim();
-
+        //encoding
+        updatedInput = encodeURIComponent(updatedInput)
+        var res = nodeApi.runSync(updatedInput);
+        if (res.resultCode === '1'){
+            alert(res.msg)
+            return false
+        }
+        // console.log(document.querySelector('#updateFuncViewDialog').returnValue);
         // drop and then add
         nodeApi.dropFunctionView(funcName);
-        nodeApi.runSync(updatedInput);
-        console.log(updatedInput);
         nodeApi.addFunctionView(newFuncName);
         getAllFuncViews();
 

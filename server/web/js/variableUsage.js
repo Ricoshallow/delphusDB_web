@@ -1,7 +1,7 @@
 
 var currNodeSite = null;
 var tabToIndex = {"pubConns": 0, "subConns": 1, "pubTables": 2, "subWorkers": 3};
-
+var allNodeSite = null;
 $(document).ready(function () {
     nodeUrl = GetFullUrl(window.location.host);
     var nodeApi = new DatanodeServer(nodeUrl);
@@ -19,15 +19,7 @@ $(document).ready(function () {
         }
     }
 
-    
-
-    allNodeSite = $("#nodes button");
-    console.log(allNodeSite);
-    for (var i=0,len=allNodeSite.length;i<len;i++){
-        var currNodeSite = allNodeSite[i].value
-        // console.log(currNodeSite);
-        displayTable(currNodeSite);
-    }
+    displayAllTable()
 
     var controller = new ControllerServer(nodeUrl);
     var currentUser = controller.getCurrentUser(); 
@@ -66,7 +58,7 @@ $(document).ready(function () {
 
     // switch datanode
     $("#nodes button").bind('click',function(){
-        console.log('1');
+        // console.log('1');
         $(this).addClass("btn-info").siblings().removeClass("btn-info")
         $(".table-div").eq($(this).index()).show().siblings().hide()
     })
@@ -104,7 +96,7 @@ var displayTable = function (currNodeSite) {
             }
             ent.push(obj)
         } 
-        console.log(ent);
+     
          // table1 title
         //  $("#title2").append("<p style='text-align: center; font-weight: bold; font-size: 16px;'>" +  "memory usage of all variables on " + currNodeSiteArr[2] + " (including variables shared by other sessions)" + "</p>");
          console.log(ent);
@@ -177,5 +169,17 @@ var displayTable = function (currNodeSite) {
     }
      
 };
+var displayAllTable = function(){
+    allNodeSite = $("#nodes button");
+    for (var i=0,len=allNodeSite.length;i<len;i++){
+        var currNodeSite = allNodeSite[i].value
+        // console.log(currNodeSite);
+        displayTable(currNodeSite);
+    }
+   
+}
 
+$("#btn_refresh").bind('click',function(){
+    displayAllTable()
+})
 

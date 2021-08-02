@@ -1,7 +1,7 @@
 
 var currNodeSite = null;
 var tabToIndex = {"pubConns": 0, "subConns": 1, "pubTables": 2, "subWorkers": 3};
-
+var allNodeSite = null;
 $(document).ready(function () {
     nodeUrl = GetFullUrl(window.location.host);
     var nodeApi = new DatanodeServer(nodeUrl);
@@ -23,13 +23,7 @@ $(document).ready(function () {
     }
 
 
-    allNodeSite = $("#nodes button");
-    console.log(allNodeSite);
-    for (var i=0,len=allNodeSite.length;i<len;i++){
-        var currNodeSite = allNodeSite[i].value
-        // console.log(currNodeSite);
-        displayTable(currNodeSite);
-    }
+    displayAllTable()
 
     var controller = new ControllerServer(nodeUrl);
     var currentUser = controller.getCurrentUser(); 
@@ -158,4 +152,16 @@ var displayTable = function (currNodeSite) {
      
 };
 
+var displayAllTable = function(){
+    allNodeSite = $("#nodes button");
+    for (var i=0,len=allNodeSite.length;i<len;i++){
+        var currNodeSite = allNodeSite[i].value
+        // console.log(currNodeSite);
+        displayTable(currNodeSite);
+    }
+    
+}
 
+$("#btn_refresh").bind('click',function(){
+    displayAllTable()
+})
