@@ -1,12 +1,10 @@
 var wa_url = GetFullUrl(window.location.host);
 var homeTitle = "[Home]"
-
 var client = null;
 $(function () {
     client = new DolphinDBDFSClient(wa_url);
 
-    $("#dfsPathInput").width($(window).width()-140);
-
+    // $("#dfsPathInput").width($(window).width()-140);
     var url = $.getUrlParam('dfs');
     var defaultPath = "/";
     if (url) {
@@ -16,7 +14,10 @@ $(function () {
     var json = client.getGridJson(defaultPath);
     bindGrid(json);
     bindPath(defaultPath)
-
+    $('#btn_refresh').bind('click',function(){
+        bindGrid(json);
+        bindPath(defaultPath)
+    })
     
 });
 

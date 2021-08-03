@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="DolphinDB Node Management">
     <meta name="author" content="DolphinDB">
+    <link rel="stylesheet" type="text/css" href="./lib/Hui-iconfont/1.0.8/iconfont.css" />
     <link rel="stylesheet" href="third-party/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="third-party/bootstrap/css/font-awesome.min.css">
     <link rel="stylesheet" href="third-party/bootstrap/css/docs.css">
@@ -75,6 +76,7 @@
             </nav>
         </div>
     </header> -->
+
     <div class="container-fluid" id="layout" style="width:99vw;padding:10px">
         <div class="row">
             <!--<div class="col-lg-3">
@@ -85,7 +87,11 @@
                         <button type="button" class="btn btn-default" id="btnBack" disabled="disabled" style="float: left;">
                                 <span class="glyphicon glyphicon-chevron-left"></span>
                         </button>  
-                    <input class="pathInput" id="dfsPathInput" type="text" spellcheck="false" style="border-radius:4px;float: left;">
+                    <input class="pathInput" id="dfsPathInput" type="text" spellcheck="false" style="border-radius:4px;float: left; width: 50%;">
+                
+                    <button type="button" class="btn btn-default" id="btn_refresh"
+                    style="background-color: #019FCC; color: white; margin: 0 8px;float: left;"><i
+                        class="Hui-iconfont">&#xe68f;</i></button>
                     <!--<div class="pathInput" id="dfsPathInput" contenteditable spellcheck="false"></div>-->
                     <ol class="breadcrumb hide" id="dfsPath"></ol>
                 </div>
