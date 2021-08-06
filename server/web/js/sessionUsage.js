@@ -4,9 +4,14 @@ var tabToIndex = {"pubConns": 0, "subConns": 1, "pubTables": 2, "subWorkers": 3}
 var allNodeSite = null;
 $(document).ready(function () {
     nodeUrl = GetFullUrl(window.location.host);
+    // http://127.0.0.1:22210
+    // console.log(nodeUrl);
     var nodeApi = new DatanodeServer(nodeUrl);
     var clusterPerf = nodeApi.runSync("getClusterPerf()");
+    
     var nodeSites = clusterPerf.object[0].value[2].value;
+    // console.log(nodeSites);
+    // ["127.0.0.1:22213:datanode2", "127.0.0.1:22214:datanode1", "127.0.0.1:22212:agent1"]
 
     var nodeHosts = [];
     var doneFirst = false;
@@ -74,6 +79,7 @@ $(document).ready(function () {
 
 
 var displayTable = function (currNodeSite) {
+    // console.log(currNodeSite);
     var currNodeSiteArr = currNodeSite.split(":");
     var currNodeUrl = GetFullUrl(currNodeSiteArr[0] + ":" + currNodeSiteArr[1]);
     var currNodeApi = new DatanodeServer(currNodeUrl);
@@ -171,7 +177,6 @@ var displayAllTable = function(){
         // console.log(currNodeSite);
         displayTable(currNodeSite);
     }
-    console.log('1');
 }
 
 $("#btn_refresh").bind('click',function(){

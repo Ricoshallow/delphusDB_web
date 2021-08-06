@@ -68,8 +68,8 @@ $(document).ready(function () {
             }
         })
     });
-
-    $("#txtFilter").val(localStorage.getItem(filterStorageId));
+    //default filter by users
+    // $("#txtFilter").val(localStorage.getItem(filterStorageId));
 
     require(["js/clusterNodeManager"], function () {
         cacheControllerIp(wa_url);
@@ -215,13 +215,11 @@ function LoadLeft(agentList) {
 }
 
 function LoadTable(nodeList) {
-    console.log(nodeList);
+    // console.log(nodeList);
     var griddata = {
         data: nodeList,
         totals: nodeList.length
     };
-    console.log(griddata);
-
     grid.GM({
         ajax_data: griddata,
         supportAutoOrder: false,
@@ -245,7 +243,9 @@ function LoadTable(nodeList) {
                     return "Datanode";
                 } else if(mode === 2) {
                     return "Controller";
-                } else {
+                } else if(mode === 4){
+                    return 'Computenode'
+                }else {
                     return "Agent"
                 }
             }

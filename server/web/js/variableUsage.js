@@ -74,11 +74,12 @@ $(document).ready(function () {
 
 
 var displayTable = function (currNodeSite) {
+    // console.log(currNodeSite);
     var currNodeSiteArr = currNodeSite.split(":");
     var currNodeUrl = GetFullUrl(currNodeSiteArr[0] + ":" + currNodeSiteArr[1]);
     var currNodeApi = new DatanodeServer(currNodeUrl);
     currNodeApi.runSync("login('admin', '123456')");
-    // sessionObjs
+    // variables
    
     var objsRe = currNodeApi.runSync("objs(true)");
     console.log(objsRe);

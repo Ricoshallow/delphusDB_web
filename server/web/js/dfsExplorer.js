@@ -3,7 +3,7 @@ var homeTitle = "[Home]"
 var client = null;
 $(function () {
     client = new DolphinDBDFSClient(wa_url);
-
+    // console.log(client);
     // $("#dfsPathInput").width($(window).width()-140);
     var url = $.getUrlParam('dfs');
     var defaultPath = "/";
@@ -14,12 +14,16 @@ $(function () {
     var json = client.getGridJson(defaultPath);
     bindGrid(json);
     bindPath(defaultPath)
-    $('#btn_refresh').bind('click',function(){
-        bindGrid(json);
-        bindPath(defaultPath)
-    })
-    
 });
+
+$('#btn_refresh_dfs').bind('click',function(){
+    // console.log('1');
+    var curPath = getCurrentPath()
+    var json = client.getGridJson(curPath)
+    bindGrid(json);
+    bindPath(curPath)
+})
+
 
 var bindPath = function (fullPath) {
     $("#dfsPath").empty();
