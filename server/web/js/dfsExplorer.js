@@ -2,7 +2,7 @@ var wa_url = GetFullUrl(window.location.host);
 var homeTitle = "[Home]"
 var client = null;
 $(function () {
-    client = new DolphinDBDFSClient(wa_url);
+    
     // console.log(client);
     // $("#dfsPathInput").width($(window).width()-140);
     var url = $.getUrlParam('dfs');
@@ -11,6 +11,7 @@ $(function () {
         defaultPath = url;
     }
     //========default url================
+    client = new DolphinDBDFSClient(wa_url);
     var json = client.getGridJson(defaultPath);
     bindGrid(json);
     bindPath(defaultPath)
@@ -122,8 +123,11 @@ var bindGrid = function (tableJson) {
                 } else {
                     fpath = cp.trimEnd('/') + "/" + arg.item.filename;;
                 }
-                bindPath(fpath);
+                // console.log(fpath);
+                
                 json = client.getGridJson(fpath);
+
+                bindPath(fpath);
                 bindGrid(json);
             } 
         }
@@ -323,6 +327,8 @@ function DolphinDBDFSClient(webApiUrl) {
         tableJson = DolphinResult2Grid(re);
         if (!tableJson) {
             alert("path '" + path + "' does not exist!");
+            // path = getUpPath()
+            bindPath('/')
         }
 
     }
@@ -366,7 +372,8 @@ function DolphinDBDFSClient(webApiUrl) {
     }
 
     this.getGridJson = function (fullPath) {
-        setCacheByPath(fullPath);
+        var isenable = setCacheByPath(fullPath);
+        
         if (!isRootPath(fullPath)) {
             $("#btnBack").removeAttr("disabled");
             // if (tableJson)
@@ -375,7 +382,9 @@ function DolphinDBDFSClient(webApiUrl) {
             $("#btnBack").attr("disabled","disabled");
         }
 //         console.log("tableJson", tableJson);
+        
         return tableJson;
+
     }
 
 }

@@ -75,24 +75,21 @@ $(document).ready(function () {
     })
 });
 
-
 var displayTable = function (currNodeSite) {
     var currNodeSiteArr = currNodeSite.split(":");
     var currNodeUrl = GetFullUrl(currNodeSiteArr[0] + ":" + currNodeSiteArr[1]);
     var currNodeApi = new DatanodeServer(currNodeUrl);
     currNodeApi.runSync("login('admin', '123456')");
-     // streaming
-     var streamingRe = currNodeApi.runSync("getStreamingStat()");
-    //  $("#memoryTable p, #memoryTable table").remove();
-     if (streamingRe.resultCode === "1") {
-         alert(streamingRe.msg);
+     // subconns
+     var subConnsRes = currNodeApi.runSync("getStreamingStat().subConns");
+
+     if (subConnsRes.resultCode === "1") {
+         alert(subConnsRes.msg);
      } else {
-         var res = streamingRe.object[0].value;
-         var tables = res[1].value; 
-         
+   
          $("#dataTable").append(`<div class="table-div" id="${currNodeSiteArr[2]}"></div>`)
         
-         var valueList = tables[2].value // subconns
+         var valueList = subConnsRes.object[0].value; 
          console.log(valueList);
          var ent = []
          for (var j=0;j<valueList[0].value.length;j++){

@@ -80,19 +80,16 @@ var displayTable = function (currNodeSite) {
     var currNodeUrl = GetFullUrl(currNodeSiteArr[0] + ":" + currNodeSiteArr[1]);
     var currNodeApi = new DatanodeServer(currNodeUrl);
     currNodeApi.runSync("login('admin', '123456')");
-     // streaming
-     var streamingRe = currNodeApi.runSync("getStreamingStat()");
-     $("#memoryTable p, #memoryTable table").remove();
-     if (streamingRe.resultCode === "1") {
-         alert(streamingRe.msg);
+     // subworkers
+     var subWorkersRes = currNodeApi.runSync("getStreamingStat().subWorkers");
+    //  $("#memoryTable p, #memoryTable table").remove();
+     if (subWorkersRes.resultCode === "1") {
+         alert(subWorkersRes.msg);
      } else {
-         var res = streamingRe.object[0].value;
-         var tables = res[1].value; 
-        
-        
+
          $("#dataTable").append(`<div class="table-div" id="${currNodeSiteArr[2]}"></div>`)
         
-        var valueList = tables[3].value // subworkers
+         var valueList = subWorkersRes.object[0].value;
         var ent = []
         for (var j=0;j<valueList[0].value.length;j++){
             var obj = {}
