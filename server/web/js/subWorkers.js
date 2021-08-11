@@ -78,8 +78,9 @@ $(document).ready(function () {
 var displayTable = function (currNodeSite) {
     var currNodeSiteArr = currNodeSite.split(":");
     var currNodeUrl = GetFullUrl(currNodeSiteArr[0] + ":" + currNodeSiteArr[1]);
+    // console.log(currNodeUrl);
     var currNodeApi = new DatanodeServer(currNodeUrl);
-    currNodeApi.runSync("login('admin', '123456')");
+    // currNodeApi.runSync("login('admin', '123456')");
      // subworkers
      var subWorkersRes = currNodeApi.runSync("getStreamingStat().subWorkers");
     //  $("#memoryTable p, #memoryTable table").remove();

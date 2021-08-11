@@ -83,7 +83,7 @@ var displayTable = function (currNodeSite) {
     var currNodeSiteArr = currNodeSite.split(":");
     var currNodeUrl = GetFullUrl(currNodeSiteArr[0] + ":" + currNodeSiteArr[1]);
     var currNodeApi = new DatanodeServer(currNodeUrl);
-    currNodeApi.runSync("login('admin', '123456')");
+    // currNodeApi.runSync("login('admin', '123456')");
     // sessionObjs
    
     var sessionRe = currNodeApi.runSync("getSessionMemoryStat()");

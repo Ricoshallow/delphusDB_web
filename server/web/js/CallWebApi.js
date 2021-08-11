@@ -2,6 +2,8 @@
 var session_storage_id = "dolphindb_session_id";
 
 function CallWebApi(apiurl, paramstr, sucfunc, errfunc, customOption) {
+    // console.log('callWebApi');
+    // console.log(localStorage.getItem(session_storage_id));
 
     if (typeof elem === 'undefined')
         elem = $('#execute-spin');
@@ -59,6 +61,9 @@ function CallWebApiSync(apiurl, paramstr) {
     if (typeof CurrentSessionID === 'undefined') {
         var CurrentSessionID = 0;
     }
+
+    console.log('callWebApiSync');
+    console.log(localStorage.getItem(session_storage_id),apiurl);
     if (localStorage.getItem(session_storage_id) == null || localStorage.getItem(session_storage_id) == "") {
         paramstr['sessionID'] = CurrentSessionID;
         localStorage.setItem(session_storage_id, CurrentSessionID)

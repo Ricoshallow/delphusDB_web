@@ -79,7 +79,7 @@ var displayTable = function (currNodeSite) {
     var currNodeSiteArr = currNodeSite.split(":");
     var currNodeUrl = GetFullUrl(currNodeSiteArr[0] + ":" + currNodeSiteArr[1]);
     var currNodeApi = new DatanodeServer(currNodeUrl);
-    currNodeApi.runSync("login('admin', '123456')");
+    // currNodeApi.runSync("login('admin', '123456')");
      // pubtables
      var pubTableRes = currNodeApi.runSync("getStreamingStat().pubTables");
      if (pubTableRes.resultCode === "1") {
