@@ -340,6 +340,40 @@ ControllerServer.prototype = {
         };
         return CallWebApi(this._url, p);
     },
+    // add computenode addNode(host, port, alias, [saveConfig], [nodeType='datanode'])
+    addComputeNode: function(host,port,alias){
+        var p = {
+            "sessionID": this._sessionid,
+            "functionName": "addNode",
+            "params": [{
+                "name": "host",
+                "form": "scalar",
+                "type": "string",
+                "value": host
+            },{
+                "name": "port",
+                "form": "scalar",
+                "type": "int",
+                "value": port
+            },{
+                "name": "alias",
+                "form": "scalar",
+                "type": "string",
+                "value": alias
+            },{
+                "name": "isSave",
+                "form": "scalar",
+                "type": "bool",
+                "value": true
+            },{
+                "name": "nodeType",
+                "form": "scalar",
+                "type": "string",
+                "value": "computenode"
+            }]
+        };
+        return CallWebApi(this._url, p);
+    },
     getClusterPerf:function(){
         var p = {
             "sessionID": this._sessionid,
