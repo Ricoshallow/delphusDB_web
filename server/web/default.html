@@ -43,7 +43,7 @@
 						<li ><a class="navbar-link" href="login.html" id="btnLogin">Login</a></li>
 						<!-- <li>超级管理员</li> -->
 						<li class="dropDown right dropDown_hover">
-							<a href="#" class="dropDown_A" id="btnAdmin">admin <i class="Hui-iconfont">&#xe6d5;</i></a>
+							<a href="#" class="dropDown_A" id="btnAdmin"></a>
 							<ul class="dropDown-menu menu radius box-shadow">
 								
 								<li><a href="#" id="btnLogout">logout</a></li>
@@ -74,7 +74,7 @@
 
 
 	<aside class="Hui-aside" >
-		<div class="menu_dropdown bk_2">
+		<div class="menu_dropdown bk_2" id="menunav_dropdown">
 			<dl id="menu-dfs">
 				<dt><i class="Hui-iconfont">&#xe72b;</i> DFS Manager<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
 				</dt>
@@ -148,6 +148,20 @@
 				</dd>
 			</dl>
 
+			<!-- Loaded On Demand -->
+			<!-- <dl id="menu-monitor">
+				<dt><i class="Hui-iconfont">&#xe6c1;</i> Perfomance Monitor<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
+				</dt>
+				<dd>
+					<ul>
+						<li><a data-href="http://115.239.209.122:9090/" data-title="Promuthues" href="javascript:void(0)">Promuthues</a></li>
+						<li><a data-href="http://115.239.209.122:9093/" data-title="Alertmanager" href="javascript:void(0)">Alertmanager</a>
+						</li>
+						
+					</ul>
+				</dd>
+			</dl> -->
+
 		</div>
 	</aside>
 	<!-- 导航栏折叠箭头 -->
@@ -204,8 +218,9 @@
     </dialog>
 
 
-	<!--_footer 作为公共模版分离出去-->
+	
 	<script type="text/javascript" src="./lib/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/loadMonitorIframe.js"></script>
 	<script type="text/javascript" src="./lib/layer/2.4/layer.js"></script>
 	<script type="text/javascript" src="./static/h-ui/js/H-ui.min.js"></script>
 	<script type="text/javascript" src="./static/h-ui.admin/js/H-ui.admin.js"></script>
@@ -228,9 +243,7 @@
     <script src="third-party/requirejs/require.js" type="text/javascript"></script>
     <script src="js/dolphinApi.js" type="text/javascript"></script>
 
-	<!--/_footer 作为公共模版分离出去-->
-
-	<!--请在下方写此页面业务相关的脚本-->
+	
 	<script type="text/javascript" src="./lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
 	<script type="text/javascript">
 		var wa_url = "";
@@ -249,7 +262,13 @@
 			if (currentUser.userId == "guest") {
 				$("#btnLogin").show();
 				$("#btnAdmin").hide();
+				
 			} else {
+				if (currentUser.isAdmin === 1) {
+					$("#btnAdmin").append(`admin <i class="Hui-iconfont">&#xe6d5;</i>`)
+				} else {
+					$("#btnAdmin").append(`${currentUser.userId} <i class="Hui-iconfont">&#xe6d5;</i>`)	
+				}
 				$("#btnLogin").hide();
 				$("#btnAdmin").show();	
 			}
@@ -296,7 +315,7 @@
 				console.log(version);
 				$("#versionGrid").empty()
 				$("#versionGrid").append(`<p style="margin: 30px 0;">${version}</p>`)
-			})
+			})	
 			
 		})
 		

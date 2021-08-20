@@ -14,7 +14,8 @@ function DolphinPlot(chartObject, elem) {
         '5': 'PIE',
         '6': 'SCATTER'
     };
-    
+    // console.log(chartObject);
+    // {name: "", form: "chart", size: "4", type: "any", value: Array(2)}
     var args = chartObject.value[1].value,
         titles = args[0].value,
         chartType = args[1],

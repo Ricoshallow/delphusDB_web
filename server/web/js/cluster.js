@@ -235,7 +235,7 @@ function LoadTable(nodeList) {
         columnData: [{
             text: 'Mode',
             key: 'mode',
-            remind: 'the role of node(controller,agent,datanode)',
+            remind: 'the role of node(controller,agent,datanode,computenode)',
             width: 80,
             template: function (mode, rowObject) {
                 // console.log(rowObject);
@@ -620,6 +620,8 @@ function refreshGrid(nodeList) {
     var fv = $("#txtFilter").val();
 
     var list = nodeList.filter(function (x) {
+
+        // get all node render grid (agent controller datanode computenode)
         return (x.mode === 0 || x.mode === 2 || x.mode === 1 || x.mode === 4) && x.site.indexOf(fv) >= 0;
     });
     var griddata = {
@@ -725,6 +727,7 @@ $("#btn_run").click(function () {
     );
 
 });
+
 $("#btn_stop").click(function () {
     var t = grid.GM("getCheckedData");
     var isAllSuccess = false;
@@ -764,6 +767,7 @@ $("#btn_stop").click(function () {
 });
 
 $("#btn_refresh").click(function () {
+    // console.log(NODE_LIST);
     GetLocalData(wa_url);
     LoadTable(NODE_LIST);
 });

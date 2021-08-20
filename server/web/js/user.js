@@ -1,4 +1,5 @@
 var controllerUrl = GetFullUrl(window.location.host);
+// console.log(controllerUrl);
 var ctlApi = null;
 var nodeApi = new DatanodeServer(controllerUrl);
 $(function () {
