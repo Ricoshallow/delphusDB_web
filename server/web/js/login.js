@@ -5,6 +5,7 @@ $('#btn-login').click(function () {
     var password = $('#password').val();
     var controller = new ControllerServer(ctlUrl);
     controller.login(username, password, function (re) {
+        console.log(re);
         if (re) {
             if(re.result){
                 var re = controller.getAuthenticatedUserTicket();

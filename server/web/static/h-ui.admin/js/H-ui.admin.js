@@ -41,7 +41,7 @@ function getskincookie(){
 	var v = $.cookie("Huiskin");
 	var hrefStr=$("#skin").attr("href");
 	if(v==null||v==""){
-		v="red";
+		v="dolphinColor";
 	}
 	if(hrefStr!=undefined){
 		var hrefRes=hrefStr.substring(0,hrefStr.lastIndexOf('skin/'))+'skin/'+v+'/skin.css';
@@ -306,11 +306,13 @@ $(function(){
 	});
 
 	/*换肤*/
-	$("#Hui-skin .dropDown-menu a").click(function(){
-		var v = $(this).attr("data-val");
-		$.cookie("Huiskin", v);
-		var hrefStr=$("#skin").attr("href");
-		var hrefRes=hrefStr.substring(0,hrefStr.lastIndexOf('skin/'))+'skin/'+v+'/skin.css';
-		$(window.frames.document).contents().find("#skin").attr("href",hrefRes);
-	});
+	// $("#Hui-skin .dropDown-menu a").click(function(){
+	// 	var v = $(this).attr("data-val");
+	// 	$.cookie("Huiskin", v);
+	// 	var hrefStr=$("#skin").attr("href");
+	// 	var hrefRes=hrefStr.substring(0,hrefStr.lastIndexOf('skin/'))+'skin/'+v+'/skin.css';
+	// 	$(window.frames.document).contents().find("#skin").attr("href",hrefRes);
+	// });
+	/**固定颜色 */
+
 });

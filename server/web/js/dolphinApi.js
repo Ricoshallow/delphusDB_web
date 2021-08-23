@@ -471,8 +471,8 @@ ControllerServer.prototype = {
         });
 
     },
-    changeUserPwd: function (userId, pass) {
-
+    changeUserPwd: function (oldPwd, newPwd,callback) {
+        this.exec.run(`changePwd("${oldPwd}","${newPwd}")`,callback)
     },
     getUserAccess: function (userId, callback) {
         this.exec.run("getUserAccess('" + userId + "')", function (re) {
@@ -567,6 +567,7 @@ ControllerServer.prototype = {
             callback(re);
         });
     },
+    
     getCurrentUser: function () {
         var guestUser = { userId: "guest", isAdmin: false };
         var cache = localStorage.getItem("DolphinDB_CurrentUsername");

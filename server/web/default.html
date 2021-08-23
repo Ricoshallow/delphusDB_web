@@ -14,6 +14,7 @@
 <script type="text/javascript" src="lib/html5shiv.js"></script>
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <![endif]-->
+	<!-- <link rel="stylesheet" href="../third-party/bootstrap/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="./static/h-ui/css/H-ui.min.css" />
 	<link rel="stylesheet" type="text/css" href="./static/h-ui.admin/css/H-ui.admin.css" />
 	<link rel="stylesheet" type="text/css" href="./lib/Hui-iconfont/1.0.8/iconfont.css" />
@@ -21,7 +22,6 @@
 	<link rel="stylesheet" type="text/css" href="./static/h-ui.admin/css/style.css" />
 	<link rel="stylesheet" href="../css/dialog.css">
     <link rel="stylesheet" href="css/global.css">
-	
 	<!--[if IE 6]>./
 <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -29,6 +29,11 @@
 	<title>DolphinBD Manager System</title>
 	<meta name="keywords" content="DolphinBD 高性能 时序数据库">
 	<meta name="description" content="DolphinDB是由浙江智臾科技有限公司研发的一款高性能分布式时序数据库，集成了功能强大的编程语言和高容量高速度的流数据分析系统，为海量结构化数据的快速存储、检索、分析及计算提供一站式解决方案，适用于量化金融及工业物联网等领域。">
+	<style>
+		.row{
+			margin:15px;
+		}
+	</style>
 </head>
 
 <body>
@@ -41,25 +46,17 @@
 				<nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
 					<ul class="cl">
 						<li ><a class="navbar-link" href="login.html" id="btnLogin">Login</a></li>
-						<!-- <li>超级管理员</li> -->
+						
 						<li class="dropDown right dropDown_hover">
 							<a href="#" class="dropDown_A" id="btnAdmin"></a>
 							<ul class="dropDown-menu menu radius box-shadow">
-								
+								<li><a href="#" id="changePassword">Password</a></li>
 								<li><a href="#" id="btnLogout">logout</a></li>
 							</ul>
 						</li>
-						<li id="Hui-skin" class="dropDown right dropDown_hover"> <a href="javascript:;" class="dropDown_A" title="换肤"><i class="Hui-iconfont" style="font-size:18px">&#xe62a;</i></a>
-							<ul class="dropDown-menu menu radius box-shadow">
-								<li><a href="javascript:;" data-val="default" title="黑色">black</a></li>		
-								<li><a href="javascript:;" data-val="green" title="绿色">green</a></li>
-								<li><a href="javascript:;" data-val="red" title="红色">red</a></li>
-								<li><a href="javascript:;" data-val="yellow" title="黄色">yellow</a></li>				
-								<li><a href="javascript:;" data-val="dolphinColor" title="DolphinColor">DolphinColor</a></li>
-							</ul>
-						</li>
+
 						<li class="dropDown right dropDown_hover">
-							<a href="#" class="dropDown_A" id="btnInformation"><i class="Hui-iconfont">&#xe63e;</i></a>
+							<a href="#" class="dropDown_A" id="btnInformation"><i class="Hui-iconfont">&#xe6cd;</i></a>
 							<ul class="dropDown-menu menu radius box-shadow">
 								
 								<li><a href="#" id="btnLicense">License</a></li>
@@ -216,6 +213,44 @@
 			<button class="btn btn-sm btn-info" value="cancel" id="close" style="position: relative; left: 40%; color: #fff; background-color:#39b3d7 ;">close</button> 
 		</form> 
     </dialog>
+	<!-- dialog for change Password -->
+	<dialog id="passwordDialog" style="width: 50%;">
+		<h3  style="margin: 20px auto;width: 400px;text-align: center;">change your password</h3>
+		<div id="errorMsg" style="margin: 10px auto;width: 400px;text-align: center;color: red;"></div>
+        <form method="dialog">
+
+			<div class="row cl">
+				<label class="form-label col-xs-4 col-sm-2">User Name :</label>
+				<div class="formControls col-xs-8 col-sm-9">
+					<input type="text" id="username" class="input-text"  disabled>
+				</div>	
+			</div>
+			<div class="row cl">
+				<label class="form-label col-xs-4 col-sm-2">Old Password :</label>
+				<div class="formControls col-xs-8 col-sm-9">
+					<input type="password" id="oldPassword" class="input-text" placeholder="enter your old password">
+				</div>	
+			</div>
+			<div class="row cl">
+				<label class="form-label col-xs-4 col-sm-2">New Password :</label>
+				<div class="formControls col-xs-8 col-sm-9">
+					<input type="password" id="newPassword" class="input-text" placeholder="enter your new password">
+				</div>	
+			</div>
+			<div class="row cl">
+				<label class="form-label col-xs-4 col-sm-2">Confirm Password :</label>
+				<div class="formControls col-xs-8 col-sm-9">
+					<input type="password" id="confirmPassword" class="input-text" placeholder="enter your new password again">
+				</div>	
+			</div>
+			
+			<div style="width: 160px;margin: 30px auto; ">
+				<button id="confirmChangePassword" class="btn btn-primary radius" value="save" ><i class="Hui-iconfont">&#xe632;</i> 保存</button>
+				<button id="cancelChangePassword" class="btn btn-default radius" value="cancel" >&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+			</div>
+
+        </form>
+    </dialog>
 
 
 	
@@ -252,7 +287,7 @@
 			HandleUrlOverHttp();
 			wa_url = GetFullUrl(window.location.host);
 			var controller = new ControllerServer(wa_url);
-			//ha
+		
 			if(!controller.isLeader()){
 				alert("The specified controller is a follower of a raft group. The active leader is : " + controller.getCurrentLeader());
 			}
@@ -270,7 +305,18 @@
 					$("#btnAdmin").append(`${currentUser.userId} <i class="Hui-iconfont">&#xe6d5;</i>`)	
 				}
 				$("#btnLogin").hide();
-				$("#btnAdmin").show();	
+				$("#btnAdmin").show();
+				// set change password dialog username	
+				$('#username').val(currentUser.userId)
+			}
+			// if not admin, display cluster and DFS only
+			if(currentUser.isAdmin!==1) {
+				$("#menu-memory").hide()
+				$("#menu-stramingData").hide()
+				$("#menu-work").hide()
+				$("#menu-functionView").hide()
+				$("#menu-admin").hide()
+
 			}
 
 			// logout handeler
@@ -316,8 +362,54 @@
 				$("#versionGrid").empty()
 				$("#versionGrid").append(`<p style="margin: 30px 0;">${version}</p>`)
 			})	
-			
+
+			// password change handler
+			$('#changePassword').bind('click',function(){
+				$('#passwordDialog')[0].showModal()
+			})
+
+			// cancel change password, clear form
+			$('#cancelChangePassword').bind('click', function(){
+				console.log('cancel');
+				$('#oldPassword').val('')
+				$('#newPassword').val('')
+				$('#confirmPassword').val('')
+				$('#errorMsg').html('')
+			})
+
+			// comfirm change, clear form
+			$('#confirmChangePassword').bind('click', function(){
+				console.log('submit');
+				var username = $('#username').val()
+				var oldPassword = $('#oldPassword').val()
+				var newPassword = $('#newPassword').val()
+				var confirmPassword = $('#confirmPassword').val()
+				if (oldPassword==='' || newPassword==='' || confirmPassword===''){
+					$('#errorMsg').html('Password cannot be empty')
+					return false
+				}
+				if (newPassword !== confirmPassword){
+					$('#errorMsg').html('The password entered twice is inconsistent')
+					$('#confirmPassword').focus()
+					return false
+				}
+				controller.changeUserPwd(oldPassword,newPassword,function(re){
+					console.log(re);
+					if (re.resultCode === '1'){
+						$("#errorMsg").html("The old password is incorrect.")
+						$('#passwordDialog')[0].showModal()
+					}else {
+						// logout and  redirct login html
+						controller.logout(username)
+						window.location.href = '/login.html'
+					}
+				})
+	
+
+			})
+	
 		})
+		
 		
 	</script>
 	
