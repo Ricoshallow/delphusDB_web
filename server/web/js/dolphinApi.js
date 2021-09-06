@@ -186,7 +186,8 @@ DatanodeServer.prototype = {
     getUserAccess: function(userId) {
         var re = this.exec.runSync("getUserAccess('" + userId + "')");
         return re;
-    }
+    },
+    
 }
 
 var AgentServer = function (url) {
@@ -198,6 +199,14 @@ var ControllerServer = function (url) {
     this.exec = new CodeExecutor(this._url);
 }
 ControllerServer.prototype = {
+    run: function (script, succallback) {
+        var exec = new CodeExecutor(this._url);
+        exec.run(script, succallback);
+    },
+    runSync: function (script) {
+        var exec = new CodeExecutor(this._url);
+        return exec.runSync(script);
+    },
     getLicense: function(){
         var re = this.exec.runSync("license()")
         return re

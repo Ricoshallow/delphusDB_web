@@ -31,31 +31,25 @@
 
 <body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true" style="padding-top: 0;">
 
-    <!-- memory management -->
+    <!-- subworks management -->
     <div class="container-fluid" id="layout" style="width:99vw;padding:10px;padding-left:20px">
         <div class="row">
             <div class="panel-body">
                 <div class="btn-toolbar" role="toolbar">
-                    <div id="nodes" style="display: inline-block;">
 
-                    </div>
-
-                    <button type="button" class="btn btn-default" id="btn_refresh"
-                    style="background-color: #019FCC; color: white; margin: 8px 0; display: inline-block;"><i
-                        class="Hui-iconfont">&#xe68f;</i></button>
                     <div class="input-group" style="margin-top: 20px; width: 30%;">
-                        <input type="text" id="searchbox" class="form-control" >
+                        <input type="text" id="searchbox" class="form-control" style="display: inline-block;">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                        <button type="button" class="btn btn-default" id="btn_refresh"
+                        style="background-color: #019FCC; color: white; margin-left: 10px;"><i
+                            class="Hui-iconfont">&#xe68f;</i></button>
                     </div>
                 </div>
             </div>
 
-            <!-- table displaying memory usage-->
+            <!-- table displaying subworks-->
             <div class="panel-body" id="dataTable">
-                <!-- <div id="title"></div>
-                <div class="table-div" id="subWorkersTable"> 
 
-                </div>  -->
             </div>
         </div>
     </div>
