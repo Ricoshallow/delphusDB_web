@@ -109,6 +109,8 @@ var getAllFuncViews = function () {
     // console.log(re);
     if (re.resultCode === "1") {
         alert(re.msg);
+        parent.window.location.reload()
+
     } else {
         $("#functionViewTable").empty();
         var res = re.object[0];
@@ -243,7 +245,10 @@ $("#btnAddFunctionView").bind("click", function (e) {
 
 $("#btnDeleteFunctionView").bind("click", function (e) {
     if (selectedFuncViews.length === 0) {
-        alert("Please select at least one function view to be deleted");
+        $('#btn_refresh').after(`<div class="alert alert-warning fade in" id="grant_alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong> Please select as least one function to delete !</strong> 
+    </div>`)
     } else {
         for (var funcView of selectedFuncViews) {
             var funcName = funcView["name"];
@@ -342,10 +347,6 @@ $("#functionViewTable").on("change", ".funcView", function () {
     }
 });
 
-// refresh handler
-$('#btn_refresh').bind('click', function () {
-    getAllFuncViews()
-})
 
 // searchboxs
 $('#searchbox').keyup(function () {
@@ -354,4 +355,13 @@ $('#searchbox').keyup(function () {
 
 })
 
-$("dialog")
+//refresh event: use throttle
+function refreshEvent(){
+    $('#btn_refresh').after(`<div class="alert alert-success fade in" id="grant_alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong> The list of functionView has been refreshed !</strong> 
+</div>`)
+    getAllFuncViews()
+}
+// refresh handler
+$('#btn_refresh').bind('click', thtottle(refreshEvent,500))

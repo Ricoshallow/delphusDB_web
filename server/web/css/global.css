@@ -13,3 +13,22 @@ body, th, td, button, input, select, textarea {
 dialog {
     border: solid 2px black !important;
 }
+
+.alert {
+    display: inline-block;
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    padding: 6px;
+    top: 3%;
+    text-align: center;
+    animation-name: alertAnimation;
+    animation-duration: 0.5s;
+}
+
+@keyframes alertAnimation{
+    0% {opacity: 0;}
+    50% {opacity: 0.5;}
+    
+}

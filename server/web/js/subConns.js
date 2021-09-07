@@ -17,9 +17,10 @@ var displayAllTable = function(){
      if (subConnsRes.resultCode === "1") {
          alert(subConnsRes.msg);
      } else {
- 
+        
         var valueList = subConnsRes.object[0].value;
         var ent = []
+        console.log(subConnsRes);
         for (var j=0;j<valueList[0].value.length;j++){
             var obj = {}
             for (var i=0,len=valueList.length;i<len;i++){

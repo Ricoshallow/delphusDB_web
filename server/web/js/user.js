@@ -4,19 +4,23 @@ var ctlApi = null;
 var nodeApi = new DatanodeServer(controllerUrl);
 $(function () {
     bindGrid();
-     // searchbox
-     $('#searchbox').keyup(function(){
+    // searchbox
+    $('#searchbox').keyup(function () {
         // console.log('1');
-        $("table tbody tr").hide().filter(":contains('" + ($(this).val()) + "')" ).show()
+        $("table tbody tr").hide().filter(":contains('" + ($(this).val()) + "')").show()
 
     })
 });
 
 var bindGrid = function () {
     ctlApi = new ControllerServer(controllerUrl);
-    ctlApi.getUserList(function (re) {
-        var ent = re;
-        console.log(ent);
+    var re = ctlApi.getUserList()
+
+    if (re.resultCode === "1") {
+        alert(re.msg)
+        parent.window.location.reload()
+    } else {
+        var ent = new DolphinEntity(re).toTable();
         $('#jsgrid').jsGrid({
             width: "100%",
             // height: "400px",
@@ -126,7 +130,8 @@ var bindGrid = function () {
                 }
             ]
         });
-    });
+    }
+
 }
 
 // add enventListener for add button
@@ -153,7 +158,10 @@ $("#btn_Add").bind("click", function () {
 // add eventListener for delete button 
 $("#btn_Del").bind("click", function () {
     if ($("#chkSelect:checked").length == 0) {
-        alert("please choose the users you want to delete")
+        $('#btn_refresh').after(`<div class="alert alert-warning fade in" id="grant_alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong> Please select as least one user to delete !</strong> 
+    </div>`)
     }
     $.each($("#chkSelect:checked"), function (i, e) {
         ctlApi.deleteUser(e.value, function (re) {
@@ -163,11 +171,14 @@ $("#btn_Del").bind("click", function () {
 });
 
 // add eventListener for revoke button
-$('#btn_Revoke').bind("click",function() {
+$('#btn_Revoke').bind("click", function () {
     var selectedUser = $("#chkSelect:checked")
     if (selectedUser.length == 0) {
-        alert("please choose the users you want to delete")
-    }else {
+        $('#btn_refresh').after(`<div class="alert alert-warning fade in" id="grant_alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong> Choose the users you want revoke !</strong> 
+    </div>`)
+    } else {
         // console.log(selectedUser);
         $('#revokeDialog')[0].showModal()
         $('#revokeGrid').empty()
@@ -217,13 +228,13 @@ $('#btn_Revoke').bind("click",function() {
       
         `)
         // confirm revoke handler
-        $('#confirmrevokeBtn').bind('click',function(){
-            for(var i=0,leni=selectedUser.length;i<leni;i++){
+        $('#confirmrevokeBtn').bind('click', function () {
+            for (var i = 0, leni = selectedUser.length; i < leni; i++) {
                 // all selected Userid
                 var user = selectedUser[i].value
                 var selectedGrant = $('input[name="grantcheckselect"]:checked')
-                for(var j=0,lenj=selectedGrant.length;j<lenj;j++){
-                    ctlApi.revoke(user,selectedGrant[j].value,function(re){
+                for (var j = 0, lenj = selectedGrant.length; j < lenj; j++) {
+                    ctlApi.revoke(user, selectedGrant[j].value, function (re) {
                         console.log('revoke successful');
                     })
                 }
@@ -231,9 +242,9 @@ $('#btn_Revoke').bind("click",function() {
             }
             bindGrid()
         })
-        
+
     }
-    
+
 
 })
 
@@ -245,7 +256,7 @@ var setScriptExec = function (userId) {
             bindGrid();
         });
     } else {
-        ctlApi.deny(userId, 6, [],function (re) {
+        ctlApi.deny(userId, 6, [], function (re) {
             bindGrid();
         });
     }
@@ -258,7 +269,7 @@ var setUnitTest = function (userId) {
             bindGrid();
         });
     } else {
-        ctlApi.deny(userId, 7, [],function (re) {
+        ctlApi.deny(userId, 7, [], function (re) {
             bindGrid();
         });
     }
@@ -271,7 +282,7 @@ var setDBCreate = function (userId) {
             bindGrid();
         });
     } else {
-        ctlApi.deny(userId, 4, [],function (re) {
+        ctlApi.deny(userId, 4, [], function (re) {
             bindGrid();
         });
     }
@@ -284,7 +295,7 @@ var setDBOwner = function (userId) {
             bindGrid();
         });
     } else {
-        ctlApi.deny(userId, 10,[], function (re) {
+        ctlApi.deny(userId, 10, [], function (re) {
             bindGrid();
         });
     }
@@ -682,7 +693,7 @@ var swapGrantCheck = function () {
             this.checked = false;
         });
         isCheckAllGrant = false;
-       
+
     } else {
         $("input[name='grantcheckselect']").each(function () {
             this.checked = true;
@@ -691,7 +702,15 @@ var swapGrantCheck = function () {
 
     }
 }
-// refresh handler
-$('#btn_refresh').bind('click', function () {
+
+//refresh event: use throttle
+function refreshEvent(){
+    $('#btn_refresh').after(`<div class="alert alert-success fade in" id="grant_alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong> The list of users has been refreshed !</strong> 
+</div>`)
     bindGrid()
-})
+}
+// refresh handler
+$('#btn_refresh').bind('click', thtottle(refreshEvent,500))
+

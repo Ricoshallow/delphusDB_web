@@ -489,13 +489,10 @@ ControllerServer.prototype = {
             callback(entity.toTable());
         });
     },
-    getUserList: function (callback) {
+    getUserList: function () {
         var exec = new CodeExecutor(this._url);
-        exec.run("getUserAccess(getUserList())", function(re){
-            // console.log(new DolphinEntity(re));
-            var tb = new DolphinEntity(re).toTable();
-            callback(tb);
-        });
+        var re = exec.runSync("getUserAccess(getUserList())");
+        return re
     },
     getRecentJobs: function (callback) {
         var exec = new CodeExecutor(this._url);
@@ -520,16 +517,8 @@ ControllerServer.prototype = {
     },
     getGroupList: function (callback) {
         var exec = new CodeExecutor(this._url);
-        exec.run("getGroupAccess(getGroupList())", function(re){
-            var vec = new DolphinEntity(re).toTable();
-            var reobj = [];
-            $.each(vec,function(i,e){
-                reobj.push(e);
-            });
-            //
-            // console.log(reobj);
-            callback(reobj);
-        });
+        var re = exec.runSync("getGroupAccess(getGroupList())");
+        return re
     },
     isUserLogin: function (userId) {
         return true;

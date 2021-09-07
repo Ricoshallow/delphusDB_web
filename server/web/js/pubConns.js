@@ -17,7 +17,7 @@ var displayAllTable = function(){
      if (pubConnsRes.resultCode === "1") {
          alert(pubConnsRes.msg);
      } else {
- 
+
         var valueList = pubConnsRes.object[0].value;
         var ent = []
         for (var j=0;j<valueList[0].value.length;j++){

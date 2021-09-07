@@ -3,22 +3,26 @@ var ctlApi = null;
 var nodeApi = new DatanodeServer(controllerUrl);
 $(function () {
     bindGrid();
-     // searchbox
-     $('#searchbox').keyup(function(){
+    // searchbox
+    $('#searchbox').keyup(function () {
         // console.log('1');
-        $("table tbody tr").hide().filter(":contains('" + ($(this).val()) + "')" ).show()
+        $("table tbody tr").hide().filter(":contains('" + ($(this).val()) + "')").show()
 
     })
 });
-
-
 var bindGrid = function () {
     ctlApi = new ControllerServer(controllerUrl);
-    ctlApi.getGroupList(function (re) {
-        //var ent = [{ groupId: "dev" }, { groupId: "dolphindbGroup" }, { groupId: "hangzhou" }]
-        var ent = re;
-        console.log(re);
-        if (typeof ent[0] !== 'object'){ent = []}
+    var re = ctlApi.getGroupList()
+    console.log(re);
+    //var ent = [{ groupId: "dev" }, { groupId: "dolphindbGroup" }, { groupId: "hangzhou" }]
+    if (re.resultCode === "1") {
+        alert(re.msg)
+        parent.window.location.reload()
+    } else {
+        var ent = new DolphinEntity(re).toTable();
+        if (typeof ent[0] !== 'object') {
+            ent = []
+        }
         $('#jsgrid').jsGrid({
             width: "100%",
             // height: "400px",
@@ -90,7 +94,7 @@ var bindGrid = function () {
                     width: 50,
                     align: "center",
                     itemTemplate: function (value, item) {
-                       
+
                         return `<a href='###' onclick='setViewGrant("${item.groupName}")'>set</a>`
                     }
                 },
@@ -136,7 +140,8 @@ var bindGrid = function () {
                 }
             ]
         });
-    });
+    }
+
 }
 
 // add eventListener for add button 
@@ -163,7 +168,10 @@ $("#btn_Add").bind("click", function () {
 // add eventListener for delete button 
 $("#btn_Del").bind("click", function () {
     if ($("#chkSelect:checked").length == 0) {
-        alert("please choose the groups you want to delete")
+        $('#btn_refresh').after(`<div class="alert alert-warning fade in" id="grant_alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong> Please select as least one group to delete !</strong> 
+    </div>`)
 
     }
     $.each($("#chkSelect:checked"), function (i, e) {
@@ -177,7 +185,10 @@ $("#btn_Del").bind("click", function () {
 $('#btn_Revoke').bind("click", function () {
     var selectedGroup = $("#chkSelect:checked")
     if (selectedGroup.length == 0) {
-        alert("please choose the users you want to delete")
+        $('#btn_refresh').after(`<div class="alert alert-warning fade in" id="grant_alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong> Choose the groups you want revoke !</strong> 
+    </div>`)
     } else {
         // console.log(selectedGroup);
         $('#revokeDialog')[0].showModal()
@@ -261,11 +272,11 @@ var setMember = function (groupId) {
         // console.log("re", re);
         $("#userTemplate").tmpl(re).appendTo("#memberGrid");
     });
-   
+
 
 }
- // confirm member manage
- $('#confirmMemberBtn').bind('click', function(){
+// confirm member manage
+$('#confirmMemberBtn').bind('click', function () {
     var userArr = [];
     var unChkUserArr = [];
     $.each($("#chkUser:checked"), function (i, e) {
@@ -738,7 +749,14 @@ var swapGrantCheck = function () {
     }
 }
 
-// refresh handler
-$('#btn_refresh').bind('click', function () {
+
+//refresh event: use throttle
+function refreshEvent(){
+    $('#btn_refresh').after(`<div class="alert alert-success fade in" id="grant_alert">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong> The list of group has been refreshed !</strong> 
+</div>`)
     bindGrid()
-})
+}
+// refresh handler
+$('#btn_refresh').bind('click', thtottle(refreshEvent,500))
