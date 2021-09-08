@@ -1,14 +1,8 @@
 $(document).ready(function () {
-    displayAllTable()
-     // searchbox
-     $('#searchbox').keyup(function(){
-        // console.log('1');
-        $("table tbody tr").hide().filter(":contains('" + ($(this).val()) + "')" ).show()
-
-    })
+    bindGrid()
 });
 
-var displayAllTable = function(){
+var bindGrid = function(){
     var nodeUrl = GetFullUrl(window.location.host);
     // http://127.0.0.1:22210
     // console.log(nodeUrl);
@@ -90,9 +84,5 @@ var displayAllTable = function(){
         })
     }
 }
-
-$("#btn_refresh").bind('click',function(){
-    displayAllTable()
-})
 
 

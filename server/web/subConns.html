@@ -32,25 +32,19 @@
 <body data-spy="scroll" data-target=".bs-docs-sidebar" data-twttr-rendered="true" style="padding-top: 0;">
 
     <!-- memory management -->
-    <div class="container-fluid" id="layout" style="width:99vw;padding:10px;padding-left:20px">
-        <div class="row">
-            <div class="panel-body">
-                <div class="btn-toolbar" role="toolbar">
+    <div class="dd_mainbody" style="height:95vh;width:99vw;padding-left:20px;position: relative;">
 
-                    <div class="input-group" style="margin-top: 20px; width: 30%;">
-                        <input type="text" id="searchbox" class="form-control" style="display: inline-block;">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-                        <button type="button" class="btn btn-default" id="btn_refresh"
-                        style="background-color: #019FCC; color: white; margin-left: 10px;"><i
-                            class="Hui-iconfont">&#xe68f;</i></button>
-                    </div>
-                </div>
-            </div>
+        <div class="input-group" style="margin-bottom: 10px; width: 30%; float: left; margin: 23px 8px;">
+            <input type="text" id="searchbox" class="form-control" >
+            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+        </div>
+        <!-- refresh btn -->
+        <button type="button" class="btn btn-default" id="btn_refresh"
+        style="background-color: #019FCC; color: white; margin: 23px 8px;"><i
+            class="Hui-iconfont">&#xe68f;</i></button>
 
-            <!-- table displaying subconns-->
-            <div class="panel-body" id="dataTable">
-
-            </div>
+        <div class="panel" style="height:90vh;margin-top: 5px;">
+            <div id="dataTable"> </div>
         </div>
     </div>
 
@@ -70,6 +64,7 @@
     <script src="js/dfsExplorer.js" type="text/javascript"></script>
     <script src="js/dolphinApi.js" type="text/javascript"></script>
     <script src="js/subConns.js" type="text/javascript"></script>
+    <script src="js/refreshAndsearchGrid.js"></script>
 </body>
 
 </html>

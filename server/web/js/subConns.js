@@ -1,15 +1,9 @@
 
 $(document).ready(function () {   
-    displayAllTable()
-     // searchbox
-     $('#searchbox').keyup(function(){
-        // console.log('1');
-        $("table tbody tr").hide().filter(":contains('" + ($(this).val()) + "')" ).show()
-
-    })
+    bindGrid()
 });
 
-var displayAllTable = function(){
+var bindGrid = function(){
     var nodeUrl = GetFullUrl(window.location.host);
     var controller = new ControllerServer(nodeUrl);
     var subConnsRes = controller.runSync("pnodeRun(def(){return getStreamingStat().subConns})");
@@ -84,7 +78,4 @@ var displayAllTable = function(){
 
 }
 
-$("#btn_refresh").bind('click',function(){
-    displayAllTable()
-})
 

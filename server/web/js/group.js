@@ -3,12 +3,6 @@ var ctlApi = null;
 var nodeApi = new DatanodeServer(controllerUrl);
 $(function () {
     bindGrid();
-    // searchbox
-    $('#searchbox').keyup(function () {
-        // console.log('1');
-        $("table tbody tr").hide().filter(":contains('" + ($(this).val()) + "')").show()
-
-    })
 });
 var bindGrid = function () {
     ctlApi = new ControllerServer(controllerUrl);
@@ -748,15 +742,3 @@ var swapGrantCheck = function () {
 
     }
 }
-
-
-//refresh event: use throttle
-function refreshEvent(){
-    $('#btn_refresh').after(`<div class="alert alert-success fade in" id="grant_alert">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <strong> The list of group has been refreshed !</strong> 
-</div>`)
-    bindGrid()
-}
-// refresh handler
-$('#btn_refresh').bind('click', thtottle(refreshEvent,500))

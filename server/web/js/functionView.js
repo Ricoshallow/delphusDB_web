@@ -22,7 +22,7 @@ $(document).ready(function () {
             $("#btnAdmin").hide();
         }
     }
-    getAllFuncViews();
+    bindGrid();
 });
 
 $("#btnLogout").bind("click", function () {
@@ -104,7 +104,7 @@ var swapCheck = function () {
     }
 }
 
-var getAllFuncViews = function () {
+var bindGrid = function () {
     var re = nodeApi.getFunctionViews();
     // console.log(re);
     if (re.resultCode === "1") {
@@ -237,7 +237,7 @@ $("#btnAddFunctionView").bind("click", function (e) {
         var funcName = userInput.substring(i + 3, j).trim();
         nodeApi.addFunctionView(funcName);
        
-        getAllFuncViews();
+        bindGrid();
     });
 });
 
@@ -254,7 +254,7 @@ $("#btnDeleteFunctionView").bind("click", function (e) {
             var funcName = funcView["name"];
             nodeApi.dropFunctionView(funcName);
         }
-        getAllFuncViews();
+        bindGrid();
         selectedFuncViews = [];
     }
 });
@@ -315,7 +315,7 @@ var btnUpdateFunctionView = function (funcName) {
         // drop and then add
         nodeApi.dropFunctionView(funcName);
         nodeApi.addFunctionView(newFuncName);
-        getAllFuncViews();
+        bindGrid();
 
     });
 }
@@ -346,22 +346,3 @@ $("#functionViewTable").on("change", ".funcView", function () {
         }
     }
 });
-
-
-// searchboxs
-$('#searchbox').keyup(function () {
-    // console.log('1');
-    $("table tbody tr").hide().filter(":contains('" + ($(this).val()) + "')").show()
-
-})
-
-//refresh event: use throttle
-function refreshEvent(){
-    $('#btn_refresh').after(`<div class="alert alert-success fade in" id="grant_alert">
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-    <strong> The list of functionView has been refreshed !</strong> 
-</div>`)
-    getAllFuncViews()
-}
-// refresh handler
-$('#btn_refresh').bind('click', thtottle(refreshEvent,500))
