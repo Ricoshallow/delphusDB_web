@@ -25,19 +25,6 @@ $(document).ready(function () {
     bindGrid();
 });
 
-$("#btnLogout").bind("click", function () {
-    var user = JSON.parse(localStorage.getItem("DolphinDB_CurrentUsername"));
-    var controller = new ControllerServer(wa_url);
-    controller.logout(user.userId, function (re) {
-        if (re.resultCode === "0") {
-            localStorage.setItem("DolphinDB_CurrentUsername", "");
-            localStorage.setItem(session_storage_id, "");
-            window.location.reload();
-        } else {
-            alert(re.msg);
-        }
-    })
-});
 
 var codeMirrorEditor = function (element, width, height) {
     var editor = CodeMirror.fromTextArea(element, {
@@ -72,10 +59,9 @@ var codeMirrorEditor = function (element, width, height) {
 };
 
 
-var newFuncEditor 
+var newFuncEditor
 var updateFuncEditor
 // var updateFuncEditor = codeMirrorEditor($("#updateFuncView")[0], 900, 200);
-
 
 var swapCheck = function () {
     if (isCheckAll) {
@@ -216,8 +202,7 @@ $("#btnAddFunctionView").bind("click", function (e) {
     newFuncEditor = codeMirrorEditor($("#newFuncView")[0], 900, 200);
     newFuncEditor.setValue("  ");
     $("#confirmFuncViewBtn").bind("click", function (e) {
-        // console.log('confirm add func');
-        // var userInput = $("#newFuncView").val();
+
         var userInput = newFuncEditor.getValue();
         // encoding
         userInput = encodeURIComponent(userInput)
@@ -230,13 +215,13 @@ $("#btnAddFunctionView").bind("click", function (e) {
             alert("Please provide a valid function definition");
             return false;
         }
-        if (test.resultCode === '1'){
+        if (test.resultCode === '1') {
             alert(test.msg)
             return false
         }
         var funcName = userInput.substring(i + 3, j).trim();
         nodeApi.addFunctionView(funcName);
-       
+
         bindGrid();
     });
 });
@@ -307,7 +292,7 @@ var btnUpdateFunctionView = function (funcName) {
         //encoding
         updatedInput = encodeURIComponent(updatedInput)
         var res = nodeApi.runSync(updatedInput);
-        if (res.resultCode === '1'){
+        if (res.resultCode === '1') {
             alert(res.msg)
             return false
         }

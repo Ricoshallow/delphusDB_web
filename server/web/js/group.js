@@ -289,7 +289,6 @@ $('#confirmMemberBtn').bind('click', function () {
 
 
 
-
 // set Script Execution
 var setScriptExec = function (groupId) {
     if (event.target.checked) {
@@ -703,8 +702,6 @@ var confirmDBDeleteSetting = function () {
 
 
 }
-
-
 
 
 // selected all handler

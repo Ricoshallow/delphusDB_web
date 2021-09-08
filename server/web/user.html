@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>User Grant Management</title>
+    <title>User Management</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DolphinDB User Grant Management">
+    <meta name="description" content="DolphinDB User Management">
     <meta name="author" content="DolphinDB">
     <link rel="stylesheet" type="text/css" href="./lib/Hui-iconfont/1.0.8/iconfont.css" />
     <link rel="stylesheet" href="../third-party/bootstrap/css/bootstrap.min.css">
@@ -23,11 +23,10 @@
         border-left-width: 5px;
         border-radius: 3px;
     }
-   
+
     .grantcheckbox label {
         font-weight: normal;
     }
-    
 </style>
 
 <body>
@@ -40,21 +39,21 @@
             style="background-color: #019FCC; color: white; margin: 8px 0;"><i class="Hui-iconfont">&#xe609;</i> Delete
             User</button>
         <button type="button" class="btn btn-default" id="btn_Revoke"
-            style="background-color: #019FCC; color: white; margin: 8px 0;"><i class="Hui-iconfont">&#xe66b;</i> Revoke 
-            </button>
+            style="background-color: #019FCC; color: white; margin: 8px 0;"><i class="Hui-iconfont">&#xe66b;</i> Revoke
+        </button>
         <button type="button" class="btn btn-default" id="btn_refresh"
             style="background-color: #019FCC; color: white; margin: 8px 0;"><i
                 class="Hui-iconfont">&#xe68f;</i></button>
-    
+
         <div class="input-group" style="margin-bottom: 10px; width: 30%; ">
-            <input type="text" id="searchbox" class="form-control" >
+            <input type="text" id="searchbox" class="form-control">
             <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
         </div>
         <div class="panel" style="height:90vh">
             <div id="jsgrid"> </div>
         </div>
     </div>
-  <!-- dialog for add users -->
+    <!-- dialog for add users -->
     <div id="dialogAdd" title="Add Group" class="modal">
         <p></p>
 

@@ -7,21 +7,24 @@
 
 **支持所有列表项全选功能，点击Select All全选或取消全选**
 
-**支持换肤功能，点击界面头部换肤图标可以切换头部和导航栏风格**
+**支持修改用户密码功能，鼠标移动到登录用户名会显示Password，点击弹出框修改密码**
 
+**支持license和version查看，鼠标移动到页面头部提示图标可以展示相应license和version信息**
 <br/>
 <br/>
+
+## DFS Manager(分布式数据库管理)
 
 ## Memory Manager (内存管理)
 **支持查看不同节点的内存**
 
 - Sessions Usage (节点的所有会话的内存使用信息)
 
-    ```getSessionMemoryStat();```
+    ```pnodeRun(getSessionMemoryStat);```
 
 - Variables Usage (变量内存,包括其他会话共享的变量表)
 
-    ```objs(true);```
+    ```pnodeRun(objs{true});```
 
 
 
@@ -32,19 +35,19 @@
 **支持查看不同节点的流数据**
 - pubConns (订阅节点)
 
-    ```getStreamingStat().pubConns;```
+    ```pnodeRun(def(){return getStreamingStat().pubConns});```
 
 - subConns (发布节点)
 
-    ```getStreamingStat().subConns;```
+    ```pnodeRun(def(){return getStreamingStat().subConns});```
 
 - pubTables ()
 
-    ```getStreamingStat().pubTables;```
+    ```pnodeRun(def(){return getStreamingStat().pubTables});```
 
 - subWorkers (订阅节点的工作线程的状态)
 
-    ```getStreamingStat().subWorkers;```
+    ```pnodeRun(def(){return getStreamingStat().subWorkers});```
 
 
 <br/>
@@ -96,9 +99,9 @@
     ```getGroupAccess(getGroupList())```
 
 
-## License Version 
 
-**支持license和version查看，点击页面头部文件图标可以展示相应license和version信息**
+
+
 
 
 
